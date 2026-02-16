@@ -50,14 +50,29 @@ Limite : 10 requêtes/minute. Pas de données live.
 
 ---
 
-## Comment reproduire (high-level)
+## Structure du projet
 
-1. **Clé API** — Créer un compte sur football-data.org, récupérer le token
-2. **Tester les endpoints** — Importer `03_data/postman/postman_collection.customization` dans Postman
-3. **Inspecter le JSON** — Identifier les champs exacts pour le mapping (voir `03_data/data.md`)
-4. **Créer la page Antigravity** — Connecter l'API avec `X-Auth-Token` en header
-5. **Construire les blocs** — Header → KPIs → Standings → Graphiques → Footer
-6. **Appliquer le thème** — Palette dark définie dans `02_design/theme.md`
+```
+/
+├── api/                # Vercel Serverless Functions (Proxy)
+├── public/             # Static Assets (HTML, CSS, JS)
+├── server.js           # Local Development Server
+├── package.json        # Project Dependencies
+└── README.md           # Documentation
+```
+
+## Setup & Installation
+
+1.  **Clone the repository**
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+3.  **Run locally**
+    ```bash
+    npm start
+    ```
+
 
 ---
 

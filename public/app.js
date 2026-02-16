@@ -12,21 +12,30 @@ async function initDashboard() {
     try {
         // Parallel fetch for better performance
         // Note: Using relative paths assuming server.js serves this on /
-        // Fetch data via Vercel Proxy
-        // Params: ?endpoint=/competitions/FL1 etc.
+        // Helper to check response
+        const fetchProxy = async (url) => {
+            const res = await fetch(url);
+            if (!res.ok) {
+                const text = await res.text();
+                throw new Error(`Erreur ${res.status}: ${text}`);
+            }
+            return res.json();
+        };
+
         const [compData, standingsData, matchesData] = await Promise.all([
-            fetch('/api/proxy?endpoint=/competitions/FL1').then(res => res.json()),
-            fetch('/api/proxy?endpoint=/competitions/FL1/standings').then(res => res.json()),
-            fetch('/api/proxy?endpoint=/competitions/FL1/matches').then(res => res.json())
+            fetchProxy('/api/proxy?endpoint=/competitions/FL1'),
+            fetchProxy('/api/proxy?endpoint=/competitions/FL1/standings'),
+            fetchProxy('/api/proxy?endpoint=/competitions/FL1/matches')
         ]);
 
         console.log("Data fetched successfully");
+
+        // ... (Rendering logic) ...
 
         // 1. Update Header Info
         updateHeader(compData);
 
         // 2. Render Main Standings Table
-        // Structure confirmed: standings[0].table[]
         const standings = standingsData.standings?.[0]?.table || [];
         renderStandings(standings);
 
@@ -34,16 +43,22 @@ async function initDashboard() {
         const matches = matchesData.matches || [];
         renderMatches(matches);
 
-        // 4. Calculate KPI Cards (Played, Goals, Avg, Leader)
+        // 4. Calculate KPI Cards
         calculateKPIs(standings);
 
         // 5. Render Top 5 Chart
         renderChart(standings.slice(0, 5));
 
     } catch (error) {
-        console.error("Critical Error loading dashboard:", error);
+        console.error("Critical Error:", error);
         document.querySelector('.dashboard-grid').innerHTML =
-            `<div style="padding:20px; color:red;">Erreur de chargement des données. Assurez-vous que le serveur Node tourne sur p3000.</div>`;
+            `<div style="padding:20px; color:var(--danger); text-align:center;">
+                <h3>Oups ! Erreur de chargement 😕</h3>
+                <p>${error.message}</p>
+                <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:10px;">
+                    Vérifie que ta variable <code>API_KEY</code> est bien configurée sur Vercel et que tu as redéployé.
+                </p>
+            </div>`;
     }
 }
 
