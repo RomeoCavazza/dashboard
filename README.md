@@ -15,6 +15,14 @@ Welcome to the **complete chronological handbook** for the Ligue 1 Dashboard pro
 
 ---
 
+> [!IMPORTANT]
+> **MVP Scope Definition**: 
+> - Single view experience (no sub-pages).
+> - High-density KPIs for instant reading.
+> - Dynamic Standings Table with real-time API binding.
+> - 4 Key Statistical Visualizations (Bar charts & Histograms).
+> - **Zero** complex navigation to maintain speed and focus.
+
 ## Technical Core
 
 | Layer | Implementation |
@@ -24,30 +32,25 @@ Welcome to the **complete chronological handbook** for the Ligue 1 Dashboard pro
 | **Security** | ![Vercel Proxy](https://img.shields.io/badge/Security-Vercel_Proxy-000000?style=flat-square) |
 | **Data Engine** | ![API v4](https://img.shields.io/badge/Data-API_v4-2979ff?style=flat-square) |
 
+### The Final Result
+Mission accomplished. We have successfully transformed a strategic vision into a live, industrial-grade Ligue 1 Dashboard.
+
+<div align="center">
+  <img src="docs/V. Vibecoding/Livrable.png" alt="Final Dashboard Delivery" width="100%" />
+</div>
+
 ---
 
 ## I. Strategic Framing
 
-Every project begins with a clear **Intention**. We refused "Feature Creep" and defined a strict MVP scope to ensure a premium delivery within record time. This phase is crucial as it sets the boundaries for the AI and the developer.
+Every project begins with a clear **Intention**. We refused "Feature Creep" and defined a strict MVP scope to ensure a premium delivery within record time using our [Strategic Brief](docs/I.%20Cadrage%20strat%C3%A9gique/projet.md).
 
-### 1. Project Specifications
-We established our guardrails in the [projet.md](docs/I.%20Cadrage%20strat%C3%A9gique/projet.md) file. This document acts as the "Contract" between the strategy and the execution.
+### Step 1.1: Strategic Strategy & Vision
+All the strategic research was synthesized into a visual framing document that allows the team to align on the final product vision before any code was written — a one-pager summarizing scope, KPIs, and product vision.
 
-> **Excerpt from [projet.md](docs/I.%20Cadrage%20strat%C3%A9gique/projet.md):**
+> **Excerpt from [Strategy Document](docs/I.%20Cadrage%20strat%C3%A9gique/projet.md):**
 > *Objective: Develop a production-ready dashboard for French Ligue 1.*
-> *Context: Use high-density data visualization to provide immediate KPI insights for sports analysts.*
-> *Platform: Single Page Application (SPA) with real-time API integration.*
-
-> [!IMPORTANT]
-> **MVP Scope Definition**: 
-> - Single view experience (no sub-pages).
-> - High-density KPIs for instant reading.
-> - Dynamic Standings Table with real-time API binding.
-> - 4 Key Statistical Visualizations (Bar charts & Histograms).
-> - **Zero** complex navigation to maintain speed and focus.
-
-### Step 1.1: Strategic Synthesis Deliverable
-All the strategic research was synthesized into a visual framing document that allows the team to align on the final product vision before any code is written — a one-pager summarizing scope, KPIs, and product vision (see below).
+> *Context: Use high-density data visualization to provide immediate KPI insights.*
 
 <div align="center">
   <img src="docs/V.%20Vibecoding/Livrable.png" alt="Strategic Framing Deliverable" width="100%" />
@@ -485,15 +488,6 @@ Adding the `X-Auth-Token` as an encrypted variable to the production scope.
 The application is now live and fully operational on its production URL.
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/vercel.png" alt="Vercel Deployment Status" width="100%" />
-</div>
-
-### 7.4. Final Results: And Voilà!
-
-**Step 7.4.1: Production Hand-off**
-The project is now live — final deliverable view of the Ligue 1 dashboard in production (below).
-
-<div align="center">
-  <img src="docs/V.%20Vibecoding/Livrable.png" alt="Final Dashboard Delivery" width="100%" />
 </div>
 
 ---
