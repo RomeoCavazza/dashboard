@@ -346,33 +346,38 @@ We implemented the [theme.md](docs/II.%20Cr%C3%A9ations%20graphiques/theme.md) d
 
 ## VIII. Final Delivery & Deployment (Phase 8)
 
-The result is a fully functional, high-density football dashboard that delivers on its professional visual promise.
+The transition from a local development environment to a live, production-grade application is the final milestone of the AI-orchestrated lifecycle.
 
-<div align="center">
-  <img src="docs/V.%20Vibecoding/Livrable.png" alt="Final Dashboard Delivery" width="100%" />
-</div>
+### 8.1. GitHub: Version Control & Remote Sync
+Once you are satisfied with your implementation, the first step is to synchronize your local workspace with the remote repository. This ensures that every line of code and documentation is secured and versioned.
 
-### Continuous Deployment
-The project is live, synchronized with GitHub and deployed via Vercel for maximum reliability.
+> **Instruction**: Execute `git add .`, `git commit -m "feat: finalize dashboard specs"`, and `git push origin main` to synchronize your project.
 
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/github.png" alt="GitHub Synchronization" width="100%" />
 </div>
 
-### Deployment Successful
-The project is live on Vercel, synchronized with our private GitHub repository for a complete AI-orchestrated lifecycle.
+### 8.2. Vercel: Production Deployment
+With your code hosted on GitHub, we leverage Vercel to host the application. This step transforms your source code into a globally accessible URL, automatically handling the secure proxy and API key injection.
 
 <div align="center">
-  <img src="docs/III.%20Architecture%20%26%20API/vercel.png" alt="Deployment Success" width="100%" />
+  <img src="docs/III.%20Architecture%20%26%20API/vercel.png" alt="Vercel Deployment Status" width="100%" />
+</div>
+
+### 8.3. Final Results: And Voilà!
+The project is now fully live. You have successfully taken a complex requirement—from a visual benchmark to a data-mapped UI—and deployed it for the world to see.
+
+<div align="center">
+  <img src="docs/V.%20Vibecoding/Livrable.png" alt="Final Dashboard Delivery" width="100%" />
 </div>
 
 ---
 
 ## 🏆 Mission Accomplished!
 
-Congratulations! Your **Ligue 1 Dashboard** is fully operational and deployed to the world.
+Congratulations! Your **Ligue 1 Dashboard** is fully operational and production-ready.
 
-**Live Demo**: [https://dashboard-one-wheat-33.vercel.app/](https%3A//dashboard-one-wheat-33.vercel.app/)
+**Live Demo**: [https://dashboard-one-wheat-33.vercel.app/](https://dashboard-one-wheat-33.vercel.app/)
 
 *This master course demonstrates the peak of AI-orchestrated development. From strategy to production, you have successfully navigated the AI-Assisted workflow.*
 
