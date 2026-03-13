@@ -275,6 +275,19 @@ graph LR
     P -- Cleaned Data --> U
 ```
 
+This architecture is reflected in a clean, modular file organization:
+
+```text
+dashboard/
+├── api/             # Vercel Secure Proxy (Node.js)
+├── docs/            # Master Knowledge Base
+├── public/          # Production UI
+│   ├── app.js       # Data Hydration Engine
+│   ├── index.html   # Semantic Structure
+│   └── style.css    # Sport-Tech CSS System
+└── server.js        # Local Dev Node Server
+```
+
 ### Step V.3: Data-to-UI Mapping Blueprint
 We mapped every UI block to its respective API collection as defined in our [architecture.md](docs/III.%20Architecture%20%26%20API/architecture.md) — the master plan for the coding session.
 
@@ -294,31 +307,25 @@ Phase VI is where the dashboard is **built and run** during a **vibecoding** ses
 
 The following sequence documents the **Antigravity** workflow. Each step represents a distinct action in the AI-orchestrated development cycle.
 
-**Step 6.1.1: Welcome & Setup**
-First contact with the agent in the coding environment—initializing the collaborative space and role definition.
-<div align="center">
-  <img src="docs/V.%20Vibecoding/screenshots/antigravity_welcome.png" alt="Antigravity Welcome" width="100%" />
-</div>
-
-**Step 6.1.2: Strategic Initialization**
+**Step 6.1.1: Strategic Initialization**
 Creating the project shell and choosing the base template for the Ligue 1 dashboard.
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_new_project.png" alt="Antigravity New Project" width="100%" />
 </div>
 
-**Step 6.1.3: Context Injection**
+**Step 6.1.2: Context Injection**
 Loading the strategy, architecture, and design docs so the agent understands the technical "Contract."
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_load-context.png" alt="Antigravity Load Context" width="100%" />
 </div>
 
-**Step 6.1.4: Natural Language Prompting**
+**Step 6.1.3: Natural Language Prompting**
 Guiding the agent with a concrete prompt to implement the proxy and feed the data engine.
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_prompting.png" alt="Antigravity Prompting" width="100%" />
 </div>
 
-**Step 6.1.5: Autonomous Code Output**
+**Step 6.1.4: Autonomous Code Output**
 The agent completes the generation of the three core artifacts (proxy, app logic, and CSS).
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_finish_code.png" alt="Antigravity Finish Code" width="100%" />
@@ -365,25 +372,25 @@ Applied via CSS custom properties to ensure colors and spacing stay consistent w
 }
 ```
 
-**Step 6.1.6: Debugging & Resolution**
+**Step 6.1.5: Debugging & Resolution**
 Handling the "Localhost" connection hand-off to ensure the server is ready for traffic.
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_localhost_not_found.png" alt="Antigravity Localhost Debug" width="100%" />
 </div>
 
-**Step 6.1.7: Local Server Launch**
+**Step 6.1.6: Local Server Launch**
 Executing the Node.js backend to start the development environment.
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_launch_node.png" alt="Antigravity Launch Node" width="100%" />
 </div>
 
-**Step 6.1.8: Browser Synchronization**
+**Step 6.1.7: Browser Synchronization**
 Refreshing the preview window to sync the newly written logic with the browser runtime.
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_reload_window.png" alt="Antigravity Reload Window" width="100%" />
 </div>
 
-**Step 6.1.9: Final Validated Build**
+**Step 6.1.8: Final Validated Build**
 The dashboard is now running locally with real data, fully mapped and styled according to specs.
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_final_results.png" alt="Antigravity Final Results" width="100%" />
