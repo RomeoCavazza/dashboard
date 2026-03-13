@@ -52,7 +52,7 @@ All the strategic research was synthesized into a visual framing document that a
 <div align="center">
   <img src="docs/V.%20Vibecoding/Livrable.png" alt="Strategic Framing Deliverable" width="100%" />
 </div>
-> Strategic framing deliverable — one-pager summarizing scope, KPIs, and product vision before development.
+Strategic framing deliverable — one-pager summarizing scope, KPIs, and product vision before development.
 
 ---
 
@@ -65,35 +65,35 @@ The landing page audit helps us understand how to greet the user with immediate,
 <div align="center">
   <img src="docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_landing.png" alt="FootX Landing Benchmark" width="100%" />
 </div>
-> FootX landing page — hierarchy and placement of main KPIs and navigation.
+FootX landing page — hierarchy and placement of main KPIs and navigation.
 
 **Step 2.2: Auditing Data-Dense Tables**
 Football fans crave density. We studied how FootX handles the Ligue 1 table to replicate its efficient use of horizontal space.
 <div align="center">
   <img src="docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_ranking.png" alt="FootX Ranking Benchmark" width="100%" />
 </div>
-> FootX ranking table — compact, data-dense layout for the Ligue 1 standings.
+FootX ranking table — compact, data-dense layout for the Ligue 1 standings.
 
 **Step 2.3: Balancing Results & Performance**
 We observed how recent match results are displayed with high contrast, ensuring that scores are the most visible element.
 <div align="center">
   <img src="docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_results.png" alt="FootX Results Benchmark" width="100%" />
 </div>
-> FootX results block — recent matches with clear score emphasis and team identities.
+FootX results block — recent matches with clear score emphasis and team identities.
 
 **Step 2.4: Managing Upcoming Match Rhythm**
 The upcoming schedule requires a "cleaner" look. We noted the use of team crests and timing info.
 <div align="center">
   <img src="docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_upcoming.png" alt="FootX Upcoming Matches Benchmark" width="100%" />
 </div>
-> FootX upcoming matches — crests, dates, and times in a readable layout.
+FootX upcoming matches — crests, dates, and times in a readable layout.
 
 **Step 2.5: Deep Analytical Components**
 Finally, we looked at advanced stats and "Value Picks" to see how to integrate secondary data without cluttering the main view.
 <div align="center">
   <img src="docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_data.png" alt="FootX Data Analysis Benchmark" width="100%" />
 </div>
-> FootX data/analytics view — advanced stats and value picks without overwhelming the main screen.
+FootX data/analytics view — advanced stats and value picks without overwhelming the main screen.
 
 ### Engineering the UI Prompt
 We didn't just tell the AI to "make it dark." We provided an exhaustive audit prompt to extract specific tokens. 
@@ -109,7 +109,7 @@ The AI processes the benchmark images and outputs a structured set of design rul
 <div align="center">
   <img src="docs/II.%20Cr%C3%A9ations%20graphiques/prompt_design.png" alt="AI UI Audit Workflow" width="100%" />
 </div>
-> AI design audit — prompt and output (colors, radii, typography) derived from the FootX benchmarks.
+AI design audit — prompt and output (colors, radii, typography) derived from the FootX benchmarks.
 
 ### The Final Design System
 The result is [theme.md](docs/II.%20Cr%C3%A9ations%20graphiques/theme.md), which serves as our visual constitution.
@@ -139,56 +139,56 @@ We started by exploring the official provider website to understand the data ava
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/api_docs/api_quickstart_assets/logo.jpg" alt="Provider Exploration" width="100%" />
 </div>
-> football-data.org branding — official source for the API used in this project.
+football-data.org branding — official source for the API used in this project.
 
 **Step 3.2: Accessing the API Portal**
 Navigating to the main developer portal to review the Quickstart guide and integration requirements.
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/api_docs/screenshots/api_landing.png" alt="API Portal" width="100%" />
 </div>
-> API portal landing — quickstart and documentation entry point.
+API portal landing — quickstart and documentation entry point.
 
 **Step 3.3: Account Registration**
 Creating a developer account to obtain a unique `X-Auth-Token`.
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/api_docs/screenshots/api_register.png" alt="API Registration" width="100%" />
 </div>
-> Registration form — create an account to get your API key.
+Registration form — create an account to get your API key.
 
 **Step 3.4: Reviewing Usage Plans**
 Auditing the "Free Tier" limitations. We noted that the 10 calls/min limit requires a smart caching strategy.
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/api_docs/screenshots/api_pricing.png" alt="API Quotas & Pricing" width="100%" />
 </div>
-> Pricing and quotas — free tier limits (e.g. 10 req/min) drive our caching design.
+Pricing and quotas — free tier limits (e.g. 10 req/min) drive our caching design.
 
 **Step 3.5: Accessing the Developer Profile**
 Verifying the email and unlocking the personal dashboard for key management.
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/api_docs/screenshots/api_profile.png" alt="User Profile" width="100%" />
 </div>
-> Developer profile — confirm email and access the dashboard where the key is shown.
+Developer profile — confirm email and access the dashboard where the key is shown.
 
 **Step 3.6: Securing the API Key**
 The final step of the setup is retrieving the `API_KEY` that will be used in our secure proxy.
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/api_docs/screenshots/api_key.md.png" alt="API Key Management" width="100%" />
 </div>
-> API key management — copy the token and store it in Vercel env (never in client code).
+API key management — copy the token and store it in Vercel env (never in client code).
 
 **Step 3.7: Logging Into the Developer Portal**
 Once registered, you log in to access the documentation and your API key from the same interface.
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/api_docs/screenshots/api_login.png" alt="API Login" width="100%" />
 </div>
-> Login screen — sign in to reach docs and API key.
+Login screen — sign in to reach docs and API key.
 
 **Step 3.8: Consulting the API Documentation**
 The provider offers a clear reference for all endpoints, parameters, and response shapes—essential before writing any integration code.
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/api_docs/screenshots/api_documentation.png" alt="API Documentation" width="100%" />
 </div>
-> API documentation — endpoints, parameters, and response formats for integration.
+API documentation — endpoints, parameters, and response formats for integration.
 
 ---
 
@@ -203,42 +203,42 @@ We found the official Postman collection provided by the API team to speed up ou
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/api_docs/screenshots/api_postman_collection.png" alt="Postman Collection Discovery" width="100%" />
 </div>
-> Official Postman collection — link or import from the API docs.
+Official Postman collection — link or import from the API docs.
 
 **Step 4.2: Importing the Environment**
 We imported the collection into our local Postman workspace to begin customization.
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/postman/screenshots/postman_import.png" alt="Collection Import" width="100%" />
 </div>
-> Importing the collection into Postman — ready to set variables and run requests.
+Importing the collection into Postman — ready to set variables and run requests.
 
 **Step 4.3: Configuring Variables**
 Setting the base URL and authentication headers to enable automated testing across all endpoints.
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/postman/screenshots/postman_url.png" alt="Postman Config" width="100%" />
 </div>
-> Postman variables — base URL and X-Auth-Token for all requests.
+Postman variables — base URL and X-Auth-Token for all requests.
 
 **Step 4.4: Testing Competition Metadata**
 Verifying that we can correctly retrieve the Ligue 1 name, season, and current matchday.
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/postman/screenshots/postman_get_competition.png" alt="Verifying Competition Meta" width="100%" />
 </div>
-> GET competition — response with Ligue 1 name, season, currentMatchday.
+GET competition — response with Ligue 1 name, season, currentMatchday.
 
 **Step 4.5: Validating Standings & Statistics**
 Ensuring the "Table" endpoint returns positions, points, and goal differences for all 18 teams.
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/postman/screenshots/postman_get_standings.png" alt="Verifying League Standings" width="100%" />
 </div>
-> GET standings — full table (position, points, goals) for the dashboard.
+GET standings — full table (position, points, goals) for the dashboard.
 
 **Step 4.6: Auditing Technical Assets**
 Confirming that team crests (logos) are provided as valid URLs that our frontend can display.
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/postman/screenshots/postman_get_teams.png" alt="Verifying Team Assets" width="100%" />
 </div>
-> GET teams — squad list and crest URLs for UI assets.
+GET teams — squad list and crest URLs for UI assets.
 
 **Step 4.7: Exporting Production JSON Samples**
 We saved the live responses into local JSON files to build a "Static Mock" and enable offline development.
@@ -284,7 +284,7 @@ We mapped every UI block to its respective API collection as defined in our [arc
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/livrable.png" alt="Data-to-UI Mapping Blueprint" width="100%" />
 </div>
-> Data-to-UI blueprint — which API endpoint feeds which component (standings, matches, teams).
+Data-to-UI blueprint — which API endpoint feeds which component (standings, matches, teams).
 
 ---
 
@@ -314,7 +314,7 @@ To build this, we provided the AI with two massive logic injections.
 <div align="center">
   <img src="docs/IV.%20Context%20Engineering/Contexte/prompt_architecture.png" alt="Architecture Scaffolding Mega-Prompt" width="100%" />
 </div>
-> Architecture mega-prompt — instructions for mapping API to components and parsing status.
+Architecture mega-prompt — instructions for mapping API to components and parsing status.
 
 **Step 6.2: Injecting Data Mapping Rules**
 > **Excerpt from technical_spec.md:**
@@ -323,7 +323,7 @@ To build this, we provided the AI with two massive logic injections.
 <div align="center">
   <img src="docs/IV.%20Context%20Engineering/Contexte/prompt_data.png" alt="Data Logic Mega-Prompt" width="100%" />
 </div>
-> Data logic mega-prompt — caching, rate limits, and data handling rules for the SPA.
+Data logic mega-prompt — caching, rate limits, and data handling rules for the SPA.
 
 ---
 
@@ -396,17 +396,17 @@ First contact with the agent: landing, welcome screen, and onboarding steps.
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_landing.png" alt="Antigravity Landing" width="100%" />
 </div>
-> Antigravity landing page — entry point to the AI coding environment.
+Antigravity landing page — entry point to the AI coding environment.
 
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_welcome.png" alt="Antigravity Welcome" width="100%" />
 </div>
-> Welcome screen explaining the agent’s role and how to start a project.
+Welcome screen explaining the agent’s role and how to start a project.
 
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_onboarding.png" alt="Antigravity Onboarding" width="100%" />
 </div>
-> Onboarding flow — initial setup and preferences before coding.
+Onboarding flow — initial setup and preferences before coding.
 
 **7.2.2 — Project Setup & Context Loading**  
 Create a new project and load the strategy/context so the agent follows the same specs (architecture, data, design).
@@ -414,17 +414,17 @@ Create a new project and load the strategy/context so the agent follows the same
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_new_project.png" alt="Antigravity New Project" width="100%" />
 </div>
-> Creating a new project in Antigravity.
+Creating a new project in Antigravity.
 
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_load-context.png" alt="Antigravity Load Context" width="100%" />
 </div>
-> Loading context (docs, architecture, theme) so the LLM stays aligned with the brief.
+Loading context (docs, architecture, theme) so the LLM stays aligned with the brief.
 
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_donwload.png" alt="Antigravity Download / Setup" width="100%" />
 </div>
-> Download or setup step — getting dependencies or project skeleton.
+Download or setup step — getting dependencies or project skeleton.
 
 **7.2.3 — Prompting & Execution**  
 Guiding the agent with clear instructions and running the app locally (Node, reload, debugging).
@@ -432,22 +432,22 @@ Guiding the agent with clear instructions and running the app locally (Node, rel
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_prompting.png" alt="Antigravity Prompting" width="100%" />
 </div>
-> Prompting the agent with concrete tasks (e.g. implement proxy, wire data).
+Prompting the agent with concrete tasks (e.g. implement proxy, wire data).
 
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_launch_node.png" alt="Antigravity Launch Node" width="100%" />
 </div>
-> Launching the Node dev server to run the dashboard locally.
+Launching the Node dev server to run the dashboard locally.
 
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_reload_window.png" alt="Antigravity Reload Window" width="100%" />
 </div>
-> Reloading the window or preview after code changes.
+Reloading the window or preview after code changes.
 
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_localhost_not_found.png" alt="Antigravity Localhost Debug" width="100%" />
 </div>
-> Typical “localhost not found” moment — port or server not ready; part of the debug loop.
+Typical “localhost not found” moment — port or server not ready; part of the debug loop.
 
 **7.2.4 — Code Complete & Final Results**  
 Agent has generated and wired the code; the app runs and the deliverable is visible.
@@ -455,12 +455,12 @@ Agent has generated and wired the code; the app runs and the deliverable is visi
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_finish_code.png" alt="Antigravity Finish Code" width="100%" />
 </div>
-> Agent signals code completion; all components (proxy, app.js, CSS) are in place.
+Agent signals code completion; all components (proxy, app.js, CSS) are in place.
 
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_final_results.png" alt="Antigravity Final Results" width="100%" />
 </div>
-> Final result — the Ligue 1 dashboard running locally, ready for deployment.
+Final result — the Ligue 1 dashboard running locally, ready for deployment.
 
 ---
 
@@ -473,12 +473,12 @@ To sync with GitHub and deploy, you need Git on your machine. Download the insta
 <div align="center">
   <img src="docs/VIII.%20Deploiement/git/git-download-page.png" alt="Git Download Page" width="100%" />
 </div>
-> Git download page — get the installer for your OS.
+Git download page — get the installer for your OS.
 
 <div align="center">
   <img src="docs/VIII.%20Deploiement/git/git-installer-wizard.jpg" alt="Git Installer Wizard" width="100%" />
 </div>
-> Git installer wizard — typical options (PATH, default branch, etc.).
+Git installer wizard — typical options (PATH, default branch, etc.).
 
 ### 8.1. GitHub: Version Control & Remote Sync
 Once you are satisfied with your implementation, synchronize your local workspace with the remote repository so every line of code and documentation is versioned.
@@ -487,23 +487,23 @@ Once you are satisfied with your implementation, synchronize your local workspac
 <div align="center">
   <img src="docs/VIII.%20Deploiement/github/github-sign-up.png" alt="GitHub Sign Up" width="100%" />
 </div>
-> GitHub sign-up — create an account if you don’t have one.
+GitHub sign-up — create an account if you don’t have one.
 
 <div align="center">
   <img src="docs/VIII.%20Deploiement/github/github-landing.png" alt="GitHub Landing" width="100%" />
 </div>
-> GitHub home — dashboard after login, from which you create or open repos.
+GitHub home — dashboard after login, from which you create or open repos.
 
 **Step 8.1.2: Create a new repository**
 <div align="center">
   <img src="docs/VIII.%20Deploiement/github/github-create-repo.png" alt="GitHub Create Repo" width="100%" />
 </div>
-> Create repository — name the repo (e.g. dashboard), visibility, optional README.
+Create repository — name the repo (e.g. dashboard), visibility, optional README.
 
 <div align="center">
   <img src="docs/VIII.%20Deploiement/github/github-repo-empty.png" alt="GitHub Repo Empty" width="100%" />
 </div>
-> Empty repo — ready for first push; note the remote URL for `git remote add`.
+Empty repo — ready for first push; note the remote URL for `git remote add`.
 
 **Step 8.1.3: Push your code and confirm**
 > **Instruction**: Run `git add .`, `git commit -m "feat: finalize dashboard specs"`, and `git push origin main` to sync your project.
@@ -511,17 +511,17 @@ Once you are satisfied with your implementation, synchronize your local workspac
 <div align="center">
   <img src="docs/VIII.%20Deploiement/github/github-dashboard.png" alt="GitHub Dashboard" width="100%" />
 </div>
-> GitHub dashboard — overview of your repos and activity.
+GitHub dashboard — overview of your repos and activity.
 
 <div align="center">
   <img src="docs/VIII.%20Deploiement/github/github-repo-full.png" alt="GitHub Repo Full" width="100%" />
 </div>
-> Repo after push — code and docs visible; ready to connect Vercel.
+Repo after push — code and docs visible; ready to connect Vercel.
 
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/github.png" alt="GitHub Synchronization" width="100%" />
 </div>
-> Sync workflow — local commits pushed to origin/main.
+Sync workflow — local commits pushed to origin/main.
 
 ### 8.2. Vercel: Production Deployment
 With your code on GitHub, use Vercel to host the app and get a public URL, with the secure proxy and API key managed via environment variables.
@@ -530,49 +530,49 @@ With your code on GitHub, use Vercel to host the app and get a public URL, with 
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_register.png" alt="Vercel Register" width="100%" />
 </div>
-> Vercel sign-up — use GitHub to connect your account.
+Vercel sign-up — use GitHub to connect your account.
 
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_landing.png" alt="Vercel Landing" width="100%" />
 </div>
-> Vercel dashboard — add new project and manage deployments.
+Vercel dashboard — add new project and manage deployments.
 
 **Step 8.2.2: Create a new project and first deploy**
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_new_project.png" alt="Vercel New Project" width="100%" />
 </div>
-> New project — import from GitHub and select the dashboard repo.
+New project — import from GitHub and select the dashboard repo.
 
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_first_deploy.png" alt="Vercel First Deploy" width="100%" />
 </div>
-> First deploy — build in progress; may fail until env vars are set.
+First deploy — build in progress; may fail until env vars are set.
 
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_second_deploy.png" alt="Vercel Second Deploy" width="100%" />
 </div>
-> Second deploy — after adding API_KEY, deploy again; app goes live.
+Second deploy — after adding API_KEY, deploy again; app goes live.
 
 **Step 8.2.3: Configure API key and environment**
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_dashboard.png" alt="Vercel Dashboard" width="100%" />
 </div>
-> Project dashboard — settings, deployments, and environment variables.
+Project dashboard — settings, deployments, and environment variables.
 
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_env.png" alt="Vercel Env" width="100%" />
 </div>
-> Environment variables — list of keys (e.g. API_KEY) for the project.
+Environment variables — list of keys (e.g. API_KEY) for the project.
 
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_add_env.png" alt="Vercel Add Env" width="100%" />
 </div>
-> Add env var — paste the football-data.org API key; redeploy after saving.
+Add env var — paste the football-data.org API key; redeploy after saving.
 
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/vercel.png" alt="Vercel Deployment Status" width="100%" />
 </div>
-> Deployment status — live URL and build logs.
+Deployment status — live URL and build logs.
 
 ### 8.3. Final Results: And Voilà!
 The project is now live. You have taken a complex requirement—from a visual benchmark to a data-mapped UI—and deployed it for the world to see.
@@ -580,7 +580,7 @@ The project is now live. You have taken a complex requirement—from a visual be
 <div align="center">
   <img src="docs/V.%20Vibecoding/Livrable.png" alt="Final Dashboard Delivery" width="100%" />
 </div>
-> Final deliverable — the Ligue 1 dashboard in production; single reference view.
+Final deliverable — the Ligue 1 dashboard in production; single reference view.
 
 ---
 
