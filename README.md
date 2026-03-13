@@ -42,13 +42,6 @@ graph LR
     E --> F[Implementation]
     F --> G[Deployment]
     
-    style A fill:#eee,stroke:#333,stroke-width:1px
-    style B fill:#eee,stroke:#333,stroke-width:1px
-    style C fill:#eee,stroke:#333,stroke-width:1px
-    style D fill:#eee,stroke:#333,stroke-width:1px
-    style E fill:#eee,stroke:#333,stroke-width:1px
-    style F fill:#eee,stroke:#333,stroke-width:1px
-    style G fill:#eee,stroke:#333,stroke-width:1px
 ```
 
 ### The Final Result
