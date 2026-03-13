@@ -321,6 +321,10 @@ The result is a fully functional, high-density football dashboard that delivers 
 ### Continuous Deployment
 The project is live, synchronized with GitHub and deployed via Vercel for maximum reliability.
 
+<div align="center">
+  <img src="docs/III.%20Architecture%20%26%20API/github.png" alt="GitHub Synchronization" width="100%" />
+</div>
+
 ### Deployment Successful
 The project is live on Vercel, synchronized with our private GitHub repository for a complete Vibe Coding lifecycle.
 
