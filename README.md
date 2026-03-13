@@ -79,29 +79,13 @@ The landing page audit helps us understand how to greet the user with immediate,
   <img src="docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_landing.png" alt="FootX Landing Benchmark" width="100%" />
 </div>
 
-**Step 2.2: Auditing Data-Dense Tables**
-Football fans crave density. We studied how FootX handles the Ligue 1 table to replicate its efficient use of horizontal space — compact, data-dense layout for the standings (screenshot below).
-<div align="center">
-  <img src="docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_ranking.png" alt="FootX Ranking Benchmark" width="100%" />
-</div>
+<br />
 
-**Step 2.3: Balancing Results & Performance**
-We observed how recent match results are displayed with high contrast, ensuring that scores are the most visible element; the FootX results block shows recent matches with clear score emphasis and team identities.
-<div align="center">
-  <img src="docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_results.png" alt="FootX Results Benchmark" width="100%" />
-</div>
-
-**Step 2.4: Managing Upcoming Match Rhythm**
-The upcoming schedule requires a "cleaner" look. We noted the use of team crests and timing info — see the FootX upcoming matches layout below.
-<div align="center">
-  <img src="docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_upcoming.png" alt="FootX Upcoming Matches Benchmark" width="100%" />
-</div>
-
-**Step 2.5: Deep Analytical Components**
-Finally, we looked at advanced stats and "Value Picks" to see how to integrate secondary data without cluttering the main view; the FootX data/analytics view keeps advanced stats and value picks without overwhelming the screen.
-<div align="center">
-  <img src="docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_data.png" alt="FootX Data Analysis Benchmark" width="100%" />
-</div>
+| [**Data-Dense Tables (2.2)**](docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_ranking.png) | [**Results & Performance (2.3)**](docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_results.png) |
+|---|---|
+| <img src="docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_ranking.png" width="400" /> | <img src="docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_results.png" width="400" /> |
+| [**Match Rhythm (2.4)**](docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_upcoming.png) | [**Analytical Assets (2.5)**](docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_data.png) |
+| <img src="docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_upcoming.png" width="400" /> | <img src="docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_data.png" width="400" /> |
 
 ### Engineering the UI Prompt
 We didn't just tell the AI to "make it dark." We provided an exhaustive audit prompt to extract specific tokens. 
