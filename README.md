@@ -73,7 +73,7 @@ All the strategic research was synthesized into a visual framing document that a
 
 To avoid a "generic" or "empty" feel, we audited **FootX.fr**, a gold standard in professional sports data visualization. We captured 5 key views to teach our AI the specific "Data DNA" of French football.
 
-**Step 2.1: Analyzing the Landing Hierarchy**
+### Step 2.1: Analyzing the Landing Hierarchy
 The landing page audit helps us understand how to greet the user with immediate, high-value information; the screenshot shows the FootX landing page — hierarchy and placement of main KPIs and navigation.
 <div align="center">
   <img src="docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_landing.png" alt="FootX Landing Benchmark" width="100%" />
@@ -96,7 +96,7 @@ We didn't just tell the AI to "make it dark." We provided an exhaustive audit pr
 > [!TIP]
 > **Mega-Prompt Restoration**: The full design audit prompt is saved in [prompt_design.md](docs/II.%20Cr%C3%A9ations%20graphiques/prompt_design.md). It instructs the AI to sample HEX codes, border radii, and spacing scales directly from the benchmark images.
 
-**Step 2.6: The AI Design Analysis**
+### Step 2.6: The AI Design Analysis
 The AI processes the benchmark images and outputs a structured set of design rules — prompt and output (colors, radii, typography) derived from the FootX benchmarks (screenshot below).
 <div align="center">
   <img src="docs/II.%20Cr%C3%A9ations%20graphiques/prompt_design.png" alt="AI UI Audit Workflow" width="100%" />
@@ -125,49 +125,49 @@ The dashboard is "Live-Mocked": it uses real production data from the **football
 
 ### Step-by-Step API Setup
 
-**Step 3.1: Discovering the Provider**
+### Step 3.1: Discovering the Provider
 We started by exploring the official provider website to understand the data availability for Ligue 1 (football-data.org branding — official source for the API, see below).
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/api_docs/api_quickstart_assets/logo.jpg" alt="Provider Exploration" width="100%" />
 </div>
 
-**Step 3.2: Accessing the API Portal**
+### Step 3.2: Accessing the API Portal
 Navigating to the main developer portal to review the Quickstart guide and integration requirements — API portal landing (screenshot below).
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/api_docs/screenshots/api_landing.png" alt="API Portal" width="100%" />
 </div>
 
-**Step 3.3: Account Registration**
+### Step 3.3: Account Registration
 Creating a developer account to obtain a unique `X-Auth-Token` (registration form below).
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/api_docs/screenshots/api_register.png" alt="API Registration" width="100%" />
 </div>
 
-**Step 3.4: Reviewing Usage Plans**
+### Step 3.4: Reviewing Usage Plans
 Auditing the "Free Tier" limitations: the 10 calls/min limit requires a smart caching strategy (pricing and quotas screenshot below).
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/api_docs/screenshots/api_pricing.png" alt="API Quotas & Pricing" width="100%" />
 </div>
 
-**Step 3.5: Accessing the Developer Profile**
+### Step 3.5: Accessing the Developer Profile
 Verifying the email and unlocking the personal dashboard for key management (developer profile — confirm email and access the key, see below).
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/api_docs/screenshots/api_profile.png" alt="User Profile" width="100%" />
 </div>
 
-**Step 3.6: Securing the API Key**
+### Step 3.6: Securing the API Key
 The final step of the setup is retrieving the `API_KEY` that will be used in our secure proxy — copy the token and store it in Vercel env (never in client code; screenshot below).
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/api_docs/screenshots/api_key.md.png" alt="API Key Management" width="100%" />
 </div>
 
-**Step 3.7: Logging Into the Developer Portal**
+### Step 3.7: Logging Into the Developer Portal
 Once registered, you log in to access the documentation and your API key from the same interface (login screen below).
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/api_docs/screenshots/api_login.png" alt="API Login" width="100%" />
 </div>
 
-**Step 3.8: Consulting the API Documentation**
+### Step 3.8: Consulting the API Documentation
 The provider offers a clear reference for all endpoints, parameters, and response shapes—essential before writing any integration code (API documentation screenshot below).
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/api_docs/screenshots/api_documentation.png" alt="API Documentation" width="100%" />
@@ -181,37 +181,37 @@ Before writing a single line of code, we validated every JSON structure. This "P
 
 ### Step-by-Step Validation
 
-**Step 4.1: Locating the Official Collection**
+### Step 4.1: Locating the Official Collection
 We found the official Postman collection provided by the API team to speed up our testing (link or import from the API docs; screenshot below).
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/api_docs/screenshots/api_postman_collection.png" alt="Postman Collection Discovery" width="100%" />
 </div>
 
-**Step 4.2: Importing the Environment**
+### Step 4.2: Importing the Environment
 We imported the collection into our local Postman workspace to begin customization (import step — ready to set variables and run requests; see below).
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/postman/screenshots/postman_import.png" alt="Collection Import" width="100%" />
 </div>
 
-**Step 4.3: Configuring Variables**
+### Step 4.3: Configuring Variables
 Setting the base URL and authentication headers to enable automated testing across all endpoints (base URL and X-Auth-Token; screenshot below).
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/postman/screenshots/postman_url.png" alt="Postman Config" width="100%" />
 </div>
 
-**Step 4.4: Testing Competition Metadata**
+### Step 4.4: Testing Competition Metadata
 Verifying that we can correctly retrieve the Ligue 1 name, season, and current matchday (GET competition response below).
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/postman/screenshots/postman_get_competition.png" alt="Verifying Competition Meta" width="100%" />
 </div>
 
-**Step 4.5: Validating Standings & Statistics**
+### Step 4.5: Validating Standings & Statistics
 Ensuring the "Table" endpoint returns positions, points, and goal differences for all 18 teams (GET standings — full table below).
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/postman/screenshots/postman_get_standings.png" alt="Verifying League Standings" width="100%" />
 </div>
 
-**Step 4.6: Auditing Technical Assets**
+### Step 4.6: Auditing Technical Assets
 Confirming that team crests (logos) are provided as valid URLs that our frontend can display (GET teams — squad list and crest URLs; screenshot below).
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/postman/screenshots/postman_get_teams.png" alt="Verifying Team Assets" width="100%" />
@@ -304,25 +304,25 @@ Phase VI is where the dashboard is **built and run** during a **vibecoding** ses
 
 The following sequence documents the **Antigravity** workflow. Each step represents a distinct action in the AI-orchestrated development cycle.
 
-**Step 6.1.1: Strategic Initialization**
+### Step 6.1.1: Strategic Initialization
 Creating the project shell and choosing the base template for the Ligue 1 dashboard.
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_new_project.png" alt="Antigravity New Project" width="100%" />
 </div>
 
-**Step 6.1.2: Context Injection**
+### Step 6.1.2: Context Injection
 Loading the strategy, architecture, and design docs so the agent understands the technical "Contract."
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_load-context.png" alt="Antigravity Load Context" width="100%" />
 </div>
 
-**Step 6.1.3: Natural Language Prompting**
+### Step 6.1.3: Natural Language Prompting
 Guiding the agent with a concrete prompt to implement the proxy and feed the data engine.
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_prompting.png" alt="Antigravity Prompting" width="100%" />
 </div>
 
-**Step 6.1.4: Autonomous Code Output**
+### Step 6.1.4: Autonomous Code Output
 The agent completes the generation of the three core artifacts (proxy, app logic, and CSS).
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_finish_code.png" alt="Antigravity Finish Code" width="100%" />
@@ -369,25 +369,25 @@ Applied via CSS custom properties to ensure colors and spacing stay consistent w
 }
 ```
 
-**Step 6.1.5: Debugging & Resolution**
+### Step 6.1.5: Debugging & Resolution
 Handling the "Localhost" connection hand-off to ensure the server is ready for traffic.
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_localhost_not_found.png" alt="Antigravity Localhost Debug" width="100%" />
 </div>
 
-**Step 6.1.6: Local Server Launch**
+### Step 6.1.6: Local Server Launch
 Executing the Node.js backend to start the development environment.
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_launch_node.png" alt="Antigravity Launch Node" width="100%" />
 </div>
 
-**Step 6.1.7: Browser Synchronization**
+### Step 6.1.7: Browser Synchronization
 Refreshing the preview window to sync the newly written logic with the browser runtime.
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_reload_window.png" alt="Antigravity Reload Window" width="100%" />
 </div>
 
-**Step 6.1.8: Final Validated Build**
+### Step 6.1.8: Final Validated Build
 The dashboard is now running locally with real data, fully mapped and styled according to specs.
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_final_results.png" alt="Antigravity Final Results" width="100%" />
@@ -403,13 +403,13 @@ The transition from a local development environment to a live, production-grade 
 
 To sync with GitHub and deploy, you need Git on your machine.
 
-**Step 7.1.1: Software Prerequisite (Git Download)**
+### Step 7.1.1: Software Prerequisite (Git Download)
 Download the installer from the official site (download page below).
 <div align="center">
   <img src="docs/VIII.%20Deploiement/git/git-download-page.png" alt="Git Download Page" width="100%" />
 </div>
 
-**Step 7.1.2: Software Prerequisite (Git Installation)**
+### Step 7.1.2: Software Prerequisite (Git Installation)
 Follow the wizard to complete the installation on your local system (installer wizard below).
 <div align="center">
   <img src="docs/VIII.%20Deploiement/git/git-installer-wizard.jpg" alt="Git Installer Wizard" width="100%" />
@@ -419,25 +419,25 @@ Follow the wizard to complete the installation on your local system (installer w
 
 Every milestone is versioned and pushed to the remote source of truth.
 
-**Step 7.2.1: Repository Creation**
+### Step 7.2.1: Repository Creation
 Setting up the destination—initializing a new repository to host the project core.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/github/github-create-repo.png" alt="GitHub Create Repo" width="100%" />
 </div>
 
-**Step 7.2.2: First Sync State**
+### Step 7.2.2: First Sync State
 The empty repository state, ready to receive the first commit of the dashboard files.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/github/github-repo-empty.png" alt="GitHub Repo Empty" width="100%" />
 </div>
 
-**Step 7.2.3: Remote Code Validation**
+### Step 7.2.3: Remote Code Validation
 Confirming that all folders (api, docs, public) are correctly synchronized on the server.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/github/github-repo-full.png" alt="GitHub Repo Full" width="100%" />
 </div>
 
-**Step 7.2.4: Sync Continuity**
+### Step 7.2.4: Sync Continuity
 Ensuring the local and remote states are perfectly aligned for industrial deployment.
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/github.png" alt="GitHub Synchronization" width="100%" />
@@ -449,37 +449,37 @@ Ensuring the local and remote states are perfectly aligned for industrial deploy
 
 Transforming the repository into a live, industrial-grade web application.
 
-**Step 7.3.1: Project Import**
+### Step 7.3.1: Project Import
 Connecting the GitHub repository to the Vercel platform to initiate the cloud build.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_landing.png" alt="Vercel Landing" width="100%" />
 </div>
 
-**Step 7.3.2: Build Configuration**
+### Step 7.3.2: Build Configuration
 Defining the framework and directory structure for the serverless deployment.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_new_project.png" alt="Vercel New Project" width="100%" />
 </div>
 
-**Step 7.3.3: Initial Deployment Trace**
+### Step 7.3.3: Initial Deployment Trace
 Triggering the first build cycle—observing the initial output before environment setup.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_first_deploy.png" alt="Vercel First Deploy" width="100%" />
 </div>
 
-**Step 7.3.4: Environment Variable Setup**
+### Step 7.3.4: Environment Variable Setup
 Accessing the project settings to inject the required production credentials.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_env.png" alt="Vercel Env" width="100%" />
 </div>
 
-**Step 7.3.5: Secure API Token Injection**
+### Step 7.3.5: Secure API Token Injection
 Adding the `X-Auth-Token` as an encrypted variable to the production scope.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_add_env.png" alt="Vercel Add Env" width="100%" />
 </div>
 
-**Step 7.3.6: Industrial Launch**
+### Step 7.3.6: Industrial Launch
 The application is now live and fully operational on its production URL.
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/vercel.png" alt="Vercel Deployment Status" width="100%" />
