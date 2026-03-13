@@ -243,11 +243,29 @@ Check all exported samples here: [postman/samples/](docs/III.%20Architecture%20%
 
 ---
 
-## V. Technical Blueprint
+## V. Architecture & Context Engineering
 
-We established the architecture using a decoupled client-proxy model to ensure security and performance.
+We establishing a project structure that is "AI-Transparent," providing full clarity to the coding agent while maintaining a decoupled client-proxy model for security.
 
-### Request Flow Diagram (Mermaid)
+### Step V.1: Scaffolding Prompts
+We provided the AI with two massive logic injections to define the architectural and data-handling rules.
+
+> **Excerpt from architecture.md:**
+> *"You are a Senior Data Architect. Map the /v4/competitions/FL1/matches endpoint to the MatchCard component. Ensure the 'status' field is parsed to show 'Live' for IN_PLAY matches."*
+
+<div align="center">
+  <img src="docs/IV.%20Context%20Engineering/Contexte/prompt_architecture.png" alt="Architecture Scaffolding Mega-Prompt" width="100%" />
+</div>
+
+> **Excerpt from technical_spec.md:**
+> *"The SPA must handle 10 API calls per minute. Implement an aggressive LocalStorage cache on the /standings endpoint with a 300s TTL."*
+
+<div align="center">
+  <img src="docs/IV.%20Context%20Engineering/Contexte/prompt_data.png" alt="Data Logic Mega-Prompt" width="100%" />
+</div>
+
+### Step V.2: Technical Architecture
+The result is a secure request flow that sanitizes tokens and optimizes performance.
 
 ```mermaid
 graph LR
@@ -257,8 +275,8 @@ graph LR
     P -- Cleaned Data --> U
 ```
 
-### The Visual Mapping
-We mapped every UI block to its respective API collection as defined in our [architecture.md](docs/III.%20Architecture%20%26%20API/architecture.md) — which endpoint feeds which component (standings, matches, teams; blueprint below).
+### Step V.3: Data-to-UI Mapping Blueprint
+We mapped every UI block to its respective API collection as defined in our [architecture.md](docs/III.%20Architecture%20%26%20API/architecture.md) — the master plan for the coding session.
 
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/livrable.png" alt="Data-to-UI Mapping Blueprint" width="100%" />
@@ -266,61 +284,52 @@ We mapped every UI block to its respective API collection as defined in our [arc
 
 ---
 
-## VI. Context Engineering: Scaffolding
+## VI. Build Implementation & Vibecoding
 
-We didn't just write files; we built a project structure that is "AI-Transparent," providing full clarity to the coding agent.
-
-### Project Arborescence
-```text
-dashboard/
-├── api/             # Vercel Secure Proxy (Node.js)
-├── docs/            # Master Knowledge Base
-├── public/          # Production UI
-│   ├── app.js       # Data Hydration Engine
-│   ├── index.html   # Semantic Structure
-│   └── style.css    # Sport-Tech CSS System
-└── server.js        # Local Dev Node Server
-```
-
-### The Scaffolding Prompts
-To build this, we provided the AI with two massive logic injections.
-
-**Step 6.1: Injecting Architecture Rules**
-> **Excerpt from data.md:**
-> *"You are a Senior Data Architect. Map the /v4/competitions/FL1/matches endpoint to the MatchCard component. Ensure the 'status' field is parsed to show 'Live' for IN_PLAY matches."*
-
-Instructions for mapping API to components and parsing status (mega-prompt screenshot below).
-<div align="center">
-  <img src="docs/IV.%20Context%20Engineering/Contexte/prompt_architecture.png" alt="Architecture Scaffolding Mega-Prompt" width="100%" />
-</div>
-
-**Step 6.2: Injecting Data Mapping Rules**
-> **Excerpt from technical_spec.md:**
-> *"The SPA must handle 10 API calls per minute. Implement an aggressive LocalStorage cache on the /standings endpoint with a 300s TTL."*
-
-Caching, rate limits, and data handling rules for the SPA (data logic mega-prompt below).
-<div align="center">
-  <img src="docs/IV.%20Context%20Engineering/Contexte/prompt_data.png" alt="Data Logic Mega-Prompt" width="100%" />
-</div>
+Phase VI is where the dashboard is **built and run** during a **vibecoding** session with **Antigravity** (AI coding agent).
 
 ---
 
-## VII. Build Implementation & Vibecoding
+### 6.1 Vibecoding Session (Phase-by-Phase with Antigravity)
 
-Phase 7 is where the dashboard is **built and run**: we define the three core code artifacts (proxy, data engine, CSS), then we show **how** they were produced during a **vibecoding** session with **Antigravity** (Microsoft’s AI coding agent). Code first, then the session that generated it.
+The following sequence documents the **Antigravity** workflow. Each step represents a distinct action in the AI-orchestrated development cycle.
 
----
+**Step 6.1.1: Welcome & Setup**
+First contact with the agent in the coding environment—initializing the collaborative space and role definition.
+<div align="center">
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_welcome.png" alt="Antigravity Welcome" width="100%" />
+</div>
 
-### 7.1 Code Artifacts (What We Build)
+**Step 6.1.2: Strategic Initialization**
+Creating the project shell and choosing the base template for the Ligue 1 dashboard.
+<div align="center">
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_new_project.png" alt="Antigravity New Project" width="100%" />
+</div>
 
-**7.1.1 — Secure API Proxy (`api/proxy.js`)**  
-The secret `API_KEY` lives in environment variables; a Node runtime forwards requests and avoids CORS while keeping credentials server-side.
+**Step 6.1.3: Context Injection**
+Loading the strategy, architecture, and design docs so the agent understands the technical "Contract."
+<div align="center">
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_load-context.png" alt="Antigravity Load Context" width="100%" />
+</div>
 
+**Step 6.1.4: Natural Language Prompting**
+Guiding the agent with a concrete prompt to implement the proxy and feed the data engine.
+<div align="center">
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_prompting.png" alt="Antigravity Prompting" width="100%" />
+</div>
+
+**Step 6.1.5: Autonomous Code Output**
+The agent completes the generation of the three core artifacts (proxy, app logic, and CSS).
+<div align="center">
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_finish_code.png" alt="Antigravity Finish Code" width="100%" />
+</div>
+
+#### **Code Artifact A: Secure API Proxy (`api/proxy.js`)**  
+The secret `API_KEY` lives in environment variables; a Node runtime forwards requests and avoids CORS.
 ```javascript
-/* Secure Backend Proxy Logic */
 export default async function handler(req, res) {
     const { endpoint } = req.query;
-    const API_KEY = process.env.API_KEY; // Managed by Vercel
+    const API_KEY = process.env.API_KEY;
     const response = await fetch(`https://api.football-data.org/v4${endpoint}`, {
         headers: { 'X-Auth-Token': API_KEY }
     });
@@ -329,32 +338,26 @@ export default async function handler(req, res) {
 }
 ```
 
-**7.1.2 — Data Engine (`public/app.js`)**  
-A single entry point fetches standings and matches on load, then fills the dashboard (KPIs, table, charts).
-
+#### **Code Artifact B: Data Engine (`public/app.js`)**  
+A single entry point fetches standings and matches on load, then fills the dashboard KPIs and charts.
 ```javascript
-/* High-Density Hydration Engine */
 async function loadDashboard() {
     const standingsData = await apiFetch('/competitions/FL1/standings');
     const matchesData = await apiFetch('/competitions/FL1/matches?season=2025');
-    
     renderKPIs(standingsData, matchesData);
     renderTable(standingsData);
     renderCharts(standingsData, matchesData);
 }
 ```
 
-**7.1.3 — Design Tokens (`public/style.css`)**  
-[theme.md](docs/II.%20Cr%C3%A9ations%20graphiques/theme.md) is applied via CSS custom properties so colors and spacing stay consistent.
-
+#### **Code Artifact C: Design Tokens (`public/style.css`)**  
+Applied via CSS custom properties to ensure colors and spacing stay consistent with the UI audit.
 ```css
 :root {
   --bg-primary: #0B0D10;
   --surface-1: #161A1F;
-  --accent-primary: #00E676; /* The iconic Ligue 1 Green */
+  --accent-primary: #00E676; /* Ligue 1 Green */
 }
-
-/* Dense Data Table Style */
 .standings-table {
   width: 100%;
   background: var(--surface-1);
@@ -362,61 +365,25 @@ async function loadDashboard() {
 }
 ```
 
----
-
-### 7.2 Vibecoding Session (Phase-by-Phase with Antigravity)
-
-The following sequence documents the **Antigravity** workflow. Each step represents a distinct action in the AI-orchestrated development cycle.
-
-**Step 7.2.1: Welcome & Setup**
-First contact with the agent in the coding environment—initializing the collaborative space and role definition.
-<div align="center">
-  <img src="docs/V.%20Vibecoding/screenshots/antigravity_welcome.png" alt="Antigravity Welcome" width="100%" />
-</div>
-
-**Step 7.2.2: Strategic Initialization**
-Creating the project shell and choosing the base template for the Ligue 1 dashboard.
-<div align="center">
-  <img src="docs/V.%20Vibecoding/screenshots/antigravity_new_project.png" alt="Antigravity New Project" width="100%" />
-</div>
-
-**Step 7.2.3: Context Injection**
-Loading the strategy, architecture, and design docs so the agent understands the technical "Contract."
-<div align="center">
-  <img src="docs/V.%20Vibecoding/screenshots/antigravity_load-context.png" alt="Antigravity Load Context" width="100%" />
-</div>
-
-**Step 7.2.4: Natural Language Prompting**
-Guiding the agent with a concrete prompt to implement the proxy and feed the data engine.
-<div align="center">
-  <img src="docs/V.%20Vibecoding/screenshots/antigravity_prompting.png" alt="Antigravity Prompting" width="100%" />
-</div>
-
-**Step 7.2.5: Autonomous Code Output**
-The agent completes the generation of the three core artifacts (proxy, app logic, and CSS).
-<div align="center">
-  <img src="docs/V.%20Vibecoding/screenshots/antigravity_finish_code.png" alt="Antigravity Finish Code" width="100%" />
-</div>
-
-**Step 7.2.6: Local Server Launch**
-Executing the Node.js backend to start the development environment.
-<div align="center">
-  <img src="docs/V.%20Vibecoding/screenshots/antigravity_launch_node.png" alt="Antigravity Launch Node" width="100%" />
-</div>
-
-**Step 7.2.7: Browser Synchronization**
-Refreshing the preview window to sync the newly written logic with the browser runtime.
-<div align="center">
-  <img src="docs/V.%20Vibecoding/screenshots/antigravity_reload_window.png" alt="Antigravity Reload Window" width="100%" />
-</div>
-
-**Step 7.2.8: Debugging & Resolution**
+**Step 6.1.6: Debugging & Resolution**
 Handling the "Localhost" connection hand-off to ensure the server is ready for traffic.
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_localhost_not_found.png" alt="Antigravity Localhost Debug" width="100%" />
 </div>
 
-**Step 7.2.9: Final Validated Build**
+**Step 6.1.7: Local Server Launch**
+Executing the Node.js backend to start the development environment.
+<div align="center">
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_launch_node.png" alt="Antigravity Launch Node" width="100%" />
+</div>
+
+**Step 6.1.8: Browser Synchronization**
+Refreshing the preview window to sync the newly written logic with the browser runtime.
+<div align="center">
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_reload_window.png" alt="Antigravity Reload Window" width="100%" />
+</div>
+
+**Step 6.1.9: Final Validated Build**
 The dashboard is now running locally with real data, fully mapped and styled according to specs.
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_final_results.png" alt="Antigravity Final Results" width="100%" />
@@ -424,7 +391,7 @@ The dashboard is now running locally with real data, fully mapped and styled acc
 
 ---
 
-## VIII. Final Delivery & Deployment
+## VII. Final Delivery & Deployment
 
 The transition from a local development environment to a live, production-grade application is the final milestone of the AI-orchestrated lifecycle.
 
@@ -438,29 +405,29 @@ To sync with GitHub and deploy, you need Git on your machine. Download the insta
   <img src="docs/VIII.%20Deploiement/git/git-installer-wizard.jpg" alt="Git Installer Wizard" width="100%" />
 </div>
 
-### 8.1 GitHub: Version Control & Remote Sync
+### 7.1 GitHub: Version Control & Remote Sync
 
 Every milestone is versioned and pushed to the remote source of truth.
 
-**Step 8.1.1: Repository Creation**
+**Step 7.1.1: Repository Creation**
 Setting up the destination—initializing a new repository to host the project core.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/github/github-create-repo.png" alt="GitHub Create Repo" width="100%" />
 </div>
 
-**Step 8.1.2: First Sync State**
+**Step 7.1.2: First Sync State**
 The empty repository state, ready to receive the first commit of the dashboard files.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/github/github-repo-empty.png" alt="GitHub Repo Empty" width="100%" />
 </div>
 
-**Step 8.1.3: Remote Code Validation**
+**Step 7.1.3: Remote Code Validation**
 Confirming that all folders (api, docs, public) are correctly synchronized on the server.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/github/github-repo-full.png" alt="GitHub Repo Full" width="100%" />
 </div>
 
-**Step 8.1.4: Sync Continuity**
+**Step 7.1.4: Sync Continuity**
 Ensuring the local and remote states are perfectly aligned for industrial deployment.
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/github.png" alt="GitHub Synchronization" width="100%" />
@@ -468,53 +435,47 @@ Ensuring the local and remote states are perfectly aligned for industrial deploy
 
 ---
 
-### 8.2 Vercel: Production Deployment
+### 7.2 Vercel: Production Deployment
 
 Transforming the repository into a live, industrial-grade web application.
 
-**Step 8.2.1: Project Import**
+**Step 7.2.1: Project Import**
 Connecting the GitHub repository to the Vercel platform to initiate the cloud build.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_landing.png" alt="Vercel Landing" width="100%" />
 </div>
 
-**Step 8.2.2: Build Configuration**
+**Step 7.2.2: Build Configuration**
 Defining the framework and directory structure for the serverless deployment.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_new_project.png" alt="Vercel New Project" width="100%" />
 </div>
 
-**Step 8.2.3: Initial Deployment Trace**
+**Step 7.2.3: Initial Deployment Trace**
 Triggering the first build cycle—observing the initial output before environment setup.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_first_deploy.png" alt="Vercel First Deploy" width="100%" />
 </div>
 
-**Step 8.2.4: Environment Variable Setup**
+**Step 7.2.4: Environment Variable Setup**
 Accessing the project settings to inject the required production credentials.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_env.png" alt="Vercel Env" width="100%" />
 </div>
 
-**Step 8.2.5: Secure API Token Injection**
+**Step 7.2.5: Secure API Token Injection**
 Adding the `X-Auth-Token` as an encrypted variable to the production scope.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_add_env.png" alt="Vercel Add Env" width="100%" />
 </div>
 
-**Step 8.2.6: Production Redeploy**
-Re-running the deployment with the live API key to activate the dashboard.
-<div align="center">
-  <img src="docs/VIII.%20Deploiement/vercel/vercel_second_deploy.png" alt="Vercel Second Deploy" width="100%" />
-</div>
-
-**Step 8.2.7: Industrial Launch**
+**Step 7.2.6: Industrial Launch**
 The application is now live and fully operational on its production URL.
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/vercel.png" alt="Vercel Deployment Status" width="100%" />
 </div>
 
-### 8.3. Final Results: And Voilà!
+### 7.3. Final Results: And Voilà!
 The project is now live — final deliverable view of the Ligue 1 dashboard in production (below).
 
 <div align="center">
