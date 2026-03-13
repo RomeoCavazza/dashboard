@@ -6,194 +6,230 @@
 
 # Case Study: Dynamic Ligue 1 Dashboard (Vibe Coding)
 
-This document is the **complete chronological handbook** for the Ligue 1 Dashboard project. It traces every iteration, from strategic framing to final deployment, including data analysis and interface design. This project was developed following the **Vibe Coding** philosophy, orchestrated by AI via **Antigravity** tools.
+This document is the **definitive, step-by-step master handbook** for the Ligue 1 Dashboard project. It traces the entire journey from the initial strategic concept to the final live application. Developed following the **Vibe Coding** philosophy, this project was orchestrated by AI via the **Antigravity** toolset.
 
 ---
 
-## Technical Overview
+## 1. Strategic Framing & Project Vision
 
-| Category | Technology Stack |
-|---|---|
-| **Frontend** | Vanilla JS, CSS3, HTML5 |
-| **Backend** | Node.js (Vercel Serverless Functions) |
-| **Data Source** | [football-data.org](https://api.football-data.org/v4) |
-| **Philosophy** | AI-First Development (Vibe Coding) |
-
----
-
-## 1. Strategic Framing
-
-The framing phase defines the scope of our **MVP** (Most Valuable Product). The goal is to create a single-page, dark-themed dashboard focused on data visualization for the French football league.
+The first step of any Vibe Coding project is setting a rigid "Intention." We defined our scope as a single-page MVP (Most Valuable Product) that delivers high-density football data with a premium "Sport-Tech" feel.
 
 > [!IMPORTANT]
-> The "Vibe" is about maintaining a tight scope. In this project, we explicitly refused any feature creep (no player-specific pages, no betting integration) to focus on the core "Standing-to-Visuals" experience.
+> **Technical Bound**: We explicitly restricted the project to a single-view dashboard. By avoiding feature creep (no player searches, no team profiles), we ensured a polished and functional delivery within a record timeframe.
 
-### The Specification Document
-The [projet.md](docs/I. Cadrage stratégique/projet.md) file serves as our source of truth. It defines:
-- **Scope**: Single view (Hero, KPIs, Standings, Stats).
-- **Goal**: Real-time league feeling.
+Resource: [projet.md](docs/I. Cadrage stratégique/projet.md) defines the core architecture and features.
 
 ---
 
-## 2. Visual Identity Design (UI/UX)
+## 2. Visual Research: The FootX Benchmark
 
-We opted for a **Sport-Tech Dark** aesthetic inspired by the reference site FootX.fr.
+To achieve a professional aesthetic, we used **FootX.fr** as our primary design reference. We didn't just look at it; we audited its information density and UI patterns across multiple sections.
 
-### Reference Analysis
-We analyzed FootX's interfaces to extract its DNA: density, high contrast, and information hierarchy.
+### Benchmark Phase: Auditing the Reference
+We captured the following specific views to guide our AI designer:
 
+**Ref A: The Landing Experience**
 <div align="center">
-  <img src="docs/II. Créations graphiques/references/livrable.png" alt="FootX Reference Analysis" width="100%" />
+  <img src="docs/II. Créations graphiques/references/screenshots_footx/footx_landing.png" alt="FootX Landing Page Reference" width="100%" />
 </div>
 
+**Ref B: The Ranking System (Ligue 1)**
 <div align="center">
-  <img src="docs/II. Créations graphiques/references/screenshots_footx/footx_landing.png" alt="FootX Landing" width="100%" />
+  <img src="docs/II. Créations graphiques/references/screenshots_footx/footx_ranking.png" alt="FootX Ranking Reference" width="100%" />
+</div>
+
+**Ref C: Recent Match Results**
+<div align="center">
+  <img src="docs/II. Créations graphiques/references/screenshots_footx/footx_results.png" alt="FootX Results Reference" width="100%" />
+</div>
+
+**Ref D: Upcoming Matches**
+<div align="center">
+  <img src="docs/II. Créations graphiques/references/screenshots_footx/footx_upcoming.png" alt="FootX Upcoming Reference" width="100%" />
+</div>
+
+**Ref E: Deep Data & Value Picks**
+<div align="center">
+  <img src="docs/II. Créations graphiques/references/screenshots_footx/footx_data.png" alt="FootX Data Reference" width="100%" />
+</div>
+
+### Designing the "Vibe"
+Using these captures, we prompted the AI to extract a coherent Design System.
+
+<div align="center">
+  <img src="docs/II. Créations graphiques/prompt_design.png" alt="AI-Driven Design Analysis" width="100%" />
 </div>
 
 > [!TIP]
-> **Aesthetic Tip**: When analyzing a reference site, look at the "negative space." FootX uses tight margins to create a "dense data" feeling that appeals to sports fans.
+> **Pro Tip**: Use the specific "Prompt Design Analysis" found in [prompt_design.md](docs/II. Créations graphiques/prompt_design.md) to replicate this process for any other reference site.
 
-### Visual Validation
-Our final design theme sets the HEX codes: Background `#0B0D10`, Accents `#00E676` (Neon Green).
-
-<div align="center">
-  <img src="docs/II. Créations graphiques/prompt_design.png" alt="AI Design Analysis Process" width="100%" />
-</div>
+### The Final Design Tokens
+The result is a dark, neon-accented theme that prioritizes legibility and data density.
 
 <div align="center">
-  <img src="docs/II. Créations graphiques/livrable.png" alt="Final Design Theme" width="100%" />
+  <img src="docs/II. Créations graphiques/livrable.png" alt="Ligue 1 Dashboard Theme Deliverable" width="100%" />
 </div>
-
-Source: [theme.md](docs/II. Créations graphiques/theme.md)
 
 ---
 
-## 3. Data Exploration & Validation (API)
+## 3. Data Infrastructure: The API Portal
 
-The project relies entirely on the [football-data.org](https://api.football-data.org/v4) API.
+Our dashboard is "Smart"—it is fueled by real-time data from **football-data.org (v4)**.
 
-### The API Portal
-We started with the Quickstart to understand authentication methods.
+### API Provider Discovery
+We started by exploring the provider's ecosystem.
 
 <div align="center">
-  <img src="docs/III. Architecture & API/api_docs/api_quickstart_assets/logo.jpg" alt="Football Data Logo" width="300" />
+  <img src="docs/III. Architecture & API/api_docs/api_quickstart_assets/logo.jpg" alt="Football Data API Provider" width="300" />
 </div>
 
 <div align="center">
-  <img src="docs/III. Architecture & API/api_docs/screenshots/api_landing.png" alt="API Website Landing" width="100%" />
+  <img src="docs/III. Architecture & API/api_docs/screenshots/api_landing.png" alt="API Portal Home" width="100%" />
 </div>
 
-### Registration & Profile
-Obtaining an `X-Auth-Token` is the mandatory first step.
+### Account Setup & Key Management
+Every developer needs a unique `X-Auth-Token`.
 
 <div align="center">
-  <img src="docs/III. Architecture & API/api_docs/screenshots/api_register.png" alt="API Registration" width="100%" />
+  <img src="docs/III. Architecture & API/api_docs/screenshots/api_register.png" alt="API Registration Process" width="100%" />
+</div>
+
+<div align="center">
+  <img src="docs/III. Architecture & API/api_docs/screenshots/api_login.png" alt="Developer Login" width="100%" />
+</div>
+
+<div align="center">
+  <img src="docs/III. Architecture & API/api_docs/screenshots/api_profile.png" alt="Developer Profile" width="100%" />
 </div>
 
 <div align="center">
   <img src="docs/III. Architecture & API/api_docs/screenshots/api_key.md.png" alt="API Key Management" width="100%" />
 </div>
 
-> [!CAUTION]
-> **API Limits**: The Free Tier allows only 10 requests per minute. Efficient caching is not just an optimization; it's a requirement to avoid 429 Errors.
-
-### Postman Testing
-Before any coding, we validated the real JSON structures.
+### Understanding Quotas & Technical Docs
+We audited the free tier limits (10 requests/min) and studied the JSON endpoint documentation.
 
 <div align="center">
-  <img src="docs/III. Architecture & API/postman/screenshots/postman_get_standings.png" alt="API Call: Standings" width="100%" />
+  <img src="docs/III. Architecture & API/api_docs/screenshots/api_pricing.png" alt="API Pricing and Limits Auditing" width="100%" />
 </div>
 
-**JSON Sample Extraction**
 <div align="center">
-  <img src="docs/III. Architecture & API/postman/screenshots/postman_save_json.png" alt="Saving JSON Samples" width="100%" />
-</div>
-
-Check source samples: [competition_FL1.json](docs/III. Architecture & API/postman/samples/competition_FL1.json), [standings_FL1.json](docs/III. Architecture & API/postman/samples/standings_FL1.json).
-
----
-
-## 4. Technical Architecture
-
-Our architecture is built on a classic client-server model with an **API Proxy** to hide the secret key.
-
-### Flow Diagram (Mermaid)
-
-```mermaid
-graph LR
-    User([User]) --> UI[Antigravity Frontend]
-    UI --> Proxy[Vercel Serverless Proxy]
-    Proxy --> API[Football-Data API]
-    API -- JSON Data --> Proxy
-    Proxy -- JSON Data --> UI
-```
-
-### Technical Mapping
-The [architecture.md](docs/III. Architecture & API/architecture.md) document formalizes how API fields map to UI components.
-
-<div align="center">
-  <img src="docs/III. Architecture & API/livrable.png" alt="Architecture Mapping" width="100%" />
+  <img src="docs/III. Architecture & API/api_docs/screenshots/api_documentation.png" alt="Technical Documentation Study" width="100%" />
 </div>
 
 ---
 
-## 5. Context Engineering & Scaffolding
+## 4. API Validation: The Postman Suite
 
-We scaffolded the project to provide structural context to the AI before writing logic.
+Before writing the first line of code, we validated every single data point using **Postman**.
 
-> [!NOTE]
-> Scaffolding is the "Skeleton" of Vibe Coding. It ensures the AI doesn't hallucinate a file structure that doesn't exist.
+### Collection Setup
+We imported the official football-data collection and configured our headers.
 
-### Project Directory Tree
-The [create_structure.sh](docs/IV. Context Engineering/Arborescence/create_structure.sh) script generated:
+<div align="center">
+  <img src="docs/III. Architecture & API/api_docs/screenshots/api_postman_collection.png" alt="Finding the Postman Collection" width="100%" />
+</div>
+
+<div align="center">
+  <img src="docs/III. Architecture & API/api_docs/screenshots/api_postman_collection_save.png" alt="Saving API Collection" width="100%" />
+</div>
+
+<div align="center">
+  <img src="docs/III. Architecture & API/postman/screenshots/postman_import.png" alt="Importing to Local Postman" width="100%" />
+</div>
+
+<div align="center">
+  <img src="docs/III. Architecture & API/postman/screenshots/postman_url.png" alt="Configuring API Base URL" width="100%" />
+</div>
+
+### Exhaustive Endpoint Testing
+We performed targeted calls to verify the structure of Ligue 1 (`FL1`) data.
+
+**Step A: Verifying Competition Meta**
+<div align="center">
+  <img src="docs/III. Architecture & API/postman/screenshots/postman_get_competition.png" alt="Testing Competition Endpoint" width="100%" />
+</div>
+
+**Step B: Verifying League Standings**
+<div align="center">
+  <img src="docs/III. Architecture & API/postman/screenshots/postman_get_standings.png" alt="Testing Standings Endpoint" width="100%" />
+</div>
+
+**Step C: Verifying Match List**
+<div align="center">
+  <img src="docs/III. Architecture & API/postman/screenshots/postman_get_matches.png" alt="Testing Matches Endpoint" width="100%" />
+</div>
+
+**Step D: Verifying Teams & Icons**
+<div align="center">
+  <img src="docs/III. Architecture & API/postman/screenshots/postman_get_teams.png" alt="Testing Teams Endpoint" width="100%" />
+</div>
+
+### Data Sample Extraction
+Finally, we exported the JSON results to our `mock/` folder to enable offline development.
+
+<div align="center">
+  <img src="docs/III. Architecture & API/postman/screenshots/postman_save_json.png" alt="Exporting JSON Samples" width="100%" />
+</div>
+
+---
+
+## 5. Engineering the Solution
+
+### Technical Architecture
+The core system uses a **Vercel Serverless Function** as a proxy to keep our API key secure while delivering data to our Vanilla JS frontend.
+
+<div align="center">
+  <img src="docs/III. Architecture & API/livrable.png" alt="Technical Architecture Flow" width="100%" />
+</div>
+
+### Repository Scaffolding
+We organized the repository using a strict hierarchy to maximize AI clarity.
 
 ```text
 dashboard/
-├── api/             # Serverless Proxy Functions
-├── docs/            # Knowledge Base (MD + PNGs)
-├── mock/            # Local Test Data
-├── public/          # Static Site Root
-└── server.js        # Local Dev Server
+├── api/             # Secure Proxy
+├── docs/            # Knowledge Base
+├── public/          # Main UI (app.js, styles.css)
+└── server.js        # Dev Server
 ```
 
 ---
 
-## 6. Vibe Coding Build Process
+## 6. Context Engineering: Orchestrating the AI
 
-### Phase 1: The API Proxy (`api/proxy.js`)
-The proxy handles the `fetch` request using the secure `process.env.API_KEY`.
+To build the dashboard, we provided the AI with two massive "Mega-Prompts" that contained the entire logic and design tokens.
 
-```javascript
-// [Source Link](api/proxy.js)
-export default async function handler(req, res) {
-    const { endpoint } = req.query;
-    const API_KEY = process.env.API_KEY;
-    const response = await fetch(`https://api.football-data.org/v4${endpoint}`, {
-        headers: { 'X-Auth-Token': API_KEY }
-    });
-    const data = await response.json();
-    res.status(200).json(data);
-}
-```
+**The Architecture Prompt**
+<div align="center">
+  <img src="docs/IV. Context Engineering/Contexte/prompt_architecture.png" alt="Scaffolding and Logic Prompt" width="100%" />
+</div>
 
-### Phase 2: UI Implementation (`public/`)
-Applying the [theme.md](docs/II. Créations graphiques/theme.md) tokens to create a dense, high-contrast interface.
+**The Data Mapping Prompt**
+<div align="center">
+  <img src="docs/IV. Context Engineering/Contexte/prompt_data.png" alt="Data Structure and Mapping Prompt" width="100%" />
+</div>
 
-### Phase 3: Data Fetching Engine (`public/app.js`)
-The engine maps JSON keys (like `team.crest`) to DOM elements.
+---
 
-> [!TIP]
-> **Coding Tip**: Always use a fallback image for team crests. Some third-party SVGs might fail to load; use the Ligue 1 logo as a default.
+## 7. The Final Build: Result & Outcomes
 
-### Final Result
-The fully functional, dynamic Ligue 1 Dashboard.
+The result is a blazing fast, data-dense dashboard that respects every design token from our FootX benchmark.
 
 <div align="center">
-  <img src="docs/V. Vibecoding/Livrable.png" alt="Final Dashboard Delivery" width="100%" />
+  <img src="docs/V. Vibecoding/Livrable.png" alt="Final Dynamic Dashboard Deliverable" width="100%" />
 </div>
+
+---
+
+## Deployment & Resources
+
+- **Source Code**: Explore `/public` for the UI and `/api` for the proxy.
+- **Specifications**: [architecture.md](docs/III. Architecture & API/architecture.md) | [theme.md](docs/II. Créations graphiques/theme.md)
+- **Status**: Production-ready, deployed on Vercel.
 
 ---
 
 <p align="center">
-  <i>Project documented by Antigravity — Strategy by Vibe Coding.</i>
+  <i>"Football Data, Refined by Vibe Coding." — Documented by Antigravity.</i>
 </p>
