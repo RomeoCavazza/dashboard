@@ -8,12 +8,6 @@
 
 Dans ce cas d'usage, nous allons créer un tableau de bord dynamique qui affiche les scores de la **Ligue 1** de football en récupérant les données auprès d'une API. Comme pour les précédents cas d'usage, nous allons procéder étape par étape et utiliser un nouvel outil : **Antigravity de Google**.
 
-<!-- markdownlint-disable MD033 -->
-<div align="center">
-  <img src="docs/V. Vibecoding/Livrable.png" alt="Ligue 1 Dashboard Final" width="800" />
-</div>
-<!-- markdownlint-enable MD033 -->
-
 ---
 
 ## Préambule
@@ -26,149 +20,182 @@ Avant de détailler chacune des étapes de la conception et de la création de c
 
 ---
 
-## Cadrage du projet
+## 1. Cadrage stratégique et intention
 
-Nous commençons par définir un cadre général en utilisant **Gemini**.
-
-### Étape 1 : Rédaction du Mega-Prompt de Cadrage
-Nous demandons à Gemini de formuler un prompt complet pour rédiger nos spécifications :
-
-> Tu es un développeur sénior spécialisé dans la conception et la création de tableaux de bord de données. Tu dois m'aider à formuler un **mega-prompt** pour rédiger le document de spécifications de mon projet : un tableau de bord en ligne qui affiche les résultats de la Ligue 1 de football français.
-
-### Étape 2 : Le Mega-Prompt de Spécification
-Le chatbot génère alors le mega-prompt suivant, que nous exécutons pour obtenir notre fichier `projet.md` :
-
-```markdown
-# Rôle
-Tu es un chef de produit sénior spécialisé dans la conception et la création de tableaux de bord de données.
-Ta mission est de produire un document de spécification nommé "projet.md".
-```
-
-### Étape 3 : Résultat du Cadrage (`projet.md`)
-Le document `projet.md` définit les checklists et la structure visuelle.
-
-```markdown
-# 7. Structure visuelle (schéma layout)
----------------------------------------------------------
-| HEADER COMPÉTITION                                     |
----------------------------------------------------------
-| KPIs GLOBAUX                                          |
----------------------------------------------------------
-| CLASSEMENT GÉNÉRAL                                    |
----------------------------------------------------------
-| VISUALISATIONS (Bar Charts & Histogramme)             |
----------------------------------------------------------
-```
+La première étape consiste à définir précisément ce que nous voulons construire. Nous utilisons Gemini pour cadrer le projet et définir le périmètre du MVP (Most Valuable Product).
 
 ---
 
-## Définition d'une intention graphique
+## 2. Définition de l'intention graphique
 
-Nous cherchons maintenant à spécifier les éléments graphiques en nous inspirant de **FootX.fr**.
+Pour donner une âme à notre dashboard, nous nous inspirons des codes visuels du site **FootX.fr**. Nous analysons l'esthétique "Sport-Tech" (Dark mode, accents néons).
 
-### Mega-Prompt UI/UX
-Nous demandons à l'IA d'analyser l'esthétique "Sport-Tech" à partir de captures d'écran :
-
-> Tu es un expert UI/UX. Ta mission est de produire un document nommé "theme.md" en t'inspirant du look & feel de FootX.fr.
-
-### Synthèse Visuelle (`theme.md`)
-L'analyse identifie les codes suivants :
-- **Dark mode dominant** : Background anthracite (`#0B0D10`).
-- **Accents saturés** : Vert néon (`#00E676`).
-
-![Design Intent](docs/II. Créations graphiques/prompt_design.png)
-![UI Inspiration](docs/II. Créations graphiques/references/livrable.png)
-
----
-
-## Choix et validation de la source de données
-
-Nous utilisons l'API de **football-data.org**. 
-
-### Étape 1 : Création du compte et Récupération de l'API Key
-Nous nous inscrivons pour obtenir notre `X-Auth-Token`.
+### Analyse de la référence visuelle
+Nous commençons par capturer l'essence de FootX pour guider notre design.
 
 <div align="center">
-  <img src="docs/III. Architecture & API/api_docs/screenshots/api_landing.png" width="400" />
-  <img src="docs/III. Architecture & API/api_docs/screenshots/api_register.png" width="400" />
+  <img src="docs/II. Créations graphiques/references/livrable.png" alt="Inspiration FootX" width="100%" />
 </div>
 
+### Extraction des tokens de design
+Nous utilisons un prompt spécifique pour demander à l'IA d'analyser les couleurs et la typographie à partir des captures.
+
 <div align="center">
-  <img src="docs/III. Architecture & API/api_docs/screenshots/api_key.md.png" width="400" />
-  <img src="docs/III. Architecture & API/api_docs/screenshots/api_pricing.png" width="400" />
+  <img src="docs/II. Créations graphiques/prompt_design.png" alt="Prompt Design Analysis" width="100%" />
 </div>
 
-### Étape 2 : Test de l'API avec Postman
-Nous importons la collection officielle pour valider les endpoints `standings` et `matches`.
+### Validation du thème visuel
+Le document de thème est finalisé, fixant le background anthracite et les accents vert néon.
 
 <div align="center">
-  <img src="docs/III. Architecture & API/api_docs/screenshots/api_postman_collection.png" width="400" />
-  <img src="docs/III. Architecture & API/postman/screenshots/postman_import.png" width="400" />
-</div>
-
-**Test de l'endpoint Standings :**
-<div align="center">
-  <img src="docs/III. Architecture & API/postman/screenshots/postman_get_standings.png" width="800" />
+  <img src="docs/II. Créations graphiques/livrable.png" alt="Final Design Theme" width="100%" />
 </div>
 
 ---
 
-## Rédaction des spécifications techniques
+## 3. Mise en place de la source de données (API)
 
-Nous demandons à Gemini de rédiger le document `data.md` et `architecture.md`.
+Notre dashboard repose sur les données en temps réel de **football-data.org**. Cette étape est cruciale pour comprendre comment récupérer les informations.
 
-![Architecture Planning](docs/III. Architecture & API/livrable.png)
-
-### Schéma d'Architecture (ASCII)
-```text
-┌─────────────────────────────────────────────────────┐
-│  1. HEADER (Nom · Saison · Logo)                    │
-├─────────────────────────────────────────────────────┤
-│  2. KPIs ([Équipes] [Matchs] [Buts] [Moy.] [Journ.]) │
-└─────────────────────────────────────────────────────┘
-```
-
----
-
-## Génération du code avec Antigravity
-
-Nous importons toute notre documentation (les captures d'écran, les fichiers MD et les samples JSON) dans Antigravity.
-
-### Le Mega-Prompt de Build
-> **MISSION** : Produis un fichier "plan.md" et un pack Node ultra simple pour tester en local. Utilise les captures d'écran du site de référence (FootX) et les samples JSON pour mapper les données.
-
-### Extraits du Code Généré
-
-**Le Proxy API (`api/proxy.js`) :**
-```javascript
-export default async function handler(req, res) {
-    const { endpoint } = req.query;
-    const API_KEY = process.env.API_KEY;
-    const response = await fetch(`https://api.football-data.org/v4${endpoint}`, {
-        headers: { 'X-Auth-Token': API_KEY }
-    });
-    const data = await response.json();
-    res.status(200).json(data);
-}
-```
-
----
-
-## Déploiement et Mise en ligne
-
-### 1. Versionnage sur GitHub
-Nous lions le projet local à un repository distant.
-
-### 2. Mise en ligne sur Vercel
-Nous importons le projet GitHub sur Vercel et configurons la variable d'environnement `API_KEY`. 
+### Exploration du fournisseur de données
+Nous nous rendons sur la plateforme pour comprendre le fonctionnement de l'API.
 
 <div align="center">
-  <img src="docs/V. Vibecoding/Livrable.png" alt="Final Dashboard" width="800" />
+  <img src="docs/III. Architecture & API/api_docs/api_quickstart_assets/logo.jpg" alt="Football Data API" width="300" />
 </div>
 
-**Félicitations ! Votre application est maintenant publique.**
+<div align="center">
+  <img src="docs/III. Architecture & API/api_docs/screenshots/api_landing.png" alt="API Website Landing" width="100%" />
+</div>
+
+### Création du compte développeur
+L'inscription est nécessaire pour obtenir une clé d'accès (API Key).
+
+<div align="center">
+  <img src="docs/III. Architecture & API/api_docs/screenshots/api_register.png" alt="API Registration" width="100%" />
+</div>
+
+### Connexion et gestion du profil
+Une fois inscrit, nous accédons à notre espace personnel.
+
+<div align="center">
+  <img src="docs/III. Architecture & API/api_docs/screenshots/api_login.png" alt="API Login" width="100%" />
+</div>
+
+<div align="center">
+  <img src="docs/III. Architecture & API/api_docs/screenshots/api_profile.png" alt="User Profile" width="100%" />
+</div>
+
+### Récupération de la clé API
+C'est cette clé (`X-Auth-Token`) qui nous permettra d'authentifier nos requêtes.
+
+<div align="center">
+  <img src="docs/III. Architecture & API/api_docs/screenshots/api_key.md.png" alt="API Key Management" width="100%" />
+</div>
+
+### Analyse des limites et de la tarification
+Nous vérifions les quotas du plan gratuit (10 requêtes par minute) pour adapter notre code.
+
+<div align="center">
+  <img src="docs/III. Architecture & API/api_docs/screenshots/api_pricing.png" alt="API Pricing and Limits" width="100%" />
+</div>
+
+### Consultation de la documentation technique
+Nous étudions les endpoints disponibles, notamment pour la Ligue 1 (`FL1`).
+
+<div align="center">
+  <img src="docs/III. Architecture & API/api_docs/screenshots/api_documentation.png" alt="Technical Documentation" width="100%" />
+</div>
 
 ---
+
+## 4. Validation et test des données avec Postman
+
+Avant de coder, nous testons les réponses de l'API avec Postman pour nous assurer de la structure des données JSON.
+
+### Utilisation de la collection officielle
+Nous récupérons le lien de la collection Postman fournie par l'API.
+
+<div align="center">
+  <img src="docs/III. Architecture & API/api_docs/screenshots/api_postman_collection.png" alt="Postman Collection Link" width="100%" />
+</div>
+
+### Sauvegarde et préparation
+Nous préparons l'importation de la collection dans notre espace de travail.
+
+<div align="center">
+  <img src="docs/III. Architecture & API/api_docs/screenshots/api_postman_collection_save.png" alt="Saving Collection" width="100%" />
+</div>
+
+### Importation dans Postman
+Nous configurons la collection pour utiliser notre clé d'API.
+
+<div align="center">
+  <img src="docs/III. Architecture & API/postman/screenshots/postman_import.png" alt="Importing to Postman" width="100%" />
+</div>
+
+### Test de récupération de la compétition
+Nous vérifions que nous pouvons accéder aux informations générales de la Ligue 1.
+
+<div align="center">
+  <img src="docs/III. Architecture & API/postman/screenshots/postman_get_competition.png" alt="API Call: Competition" width="100%" />
+</div>
+
+### Test de récupération du classement
+Nous validons la structure du tableau des scores pour pouvoir le mapper correctement dans notre UI.
+
+<div align="center">
+  <img src="docs/III. Architecture & API/postman/screenshots/postman_get_standings.png" alt="API Call: Standings" width="100%" />
+</div>
+
+---
+
+## 5. Architecture technique et schéma de flux
+
+Nous formalisons maintenant l'architecture de l'application : comment les données circulent de l'API vers le dashboard via un serveur proxy.
+
+<div align="center">
+  <img src="docs/III. Architecture & API/livrable.png" alt="Architecture Diagram" width="100%" />
+</div>
+
+---
+
+## 6. Context Engineering : Préparation de l'IA
+
+Nous fournissons à l'agent IA (Antigravity) tout le contexte nécessaire : design, données et architecture.
+
+### Prompt de structure technique
+Nous demandons à l'IA d'organiser le code en respectant les schémas définis.
+
+<div align="center">
+  <img src="docs/IV. Context Engineering/Contexte/prompt_architecture.png" alt="Architecture Prompt" width="100%" />
+</div>
+
+### Prompt de mapping de données
+Nous transmettons les échantillons JSON pour que l'IA génère les bonnes fonctions de récupération.
+
+<div align="center">
+  <img src="docs/IV. Context Engineering/Contexte/prompt_data.png" alt="Data Mapping Prompt" width="100%" />
+</div>
+
+---
+
+## 7. Build et Vibe Coding final
+
+C'est ici que la magie opère. L'IA assemble tous les composants pour créer le livrable final.
+
+### Résultat de la génération
+Le dashboard est prêt, dynamique et fidèle au design de référence.
+
+<div align="center">
+  <img src="docs/V. Vibecoding/Livrable.png" alt="Final Dashboard Delivery" width="100%" />
+</div>
+
+---
+
+## Déploiement
+
+L'application est finalement versionnée sur **GitHub** et déployée sur **Vercel** pour être accessible par tous.
 
 <p align="center">
   <i>"Football Data, Refined by Vibe Coding."</i>
