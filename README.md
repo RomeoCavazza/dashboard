@@ -1,210 +1,229 @@
+<div align="center">
+  <img src="https://img.shields.io/badge/Architecture-Vibe_Coding-6366f1?style=for-the-badge" alt="Architecture Badge" />
+  <img src="https://img.shields.io/badge/Visuals-Midjourney-00e676?style=for-the-badge" alt="Visuals Badge" />
+  <img src="https://img.shields.io/badge/Stack-Vanilla_JS-f7df1e?style=for-the-badge" alt="Stack Badge" />
+  <img src="https://img.shields.io/badge/API-Football_Data-2979ff?style=for-the-badge" alt="API Badge" />
+</div>
+
+<br />
+
 <!-- markdownlint-disable MD033 -->
 <div align="center">
   <img src="public/logo_ligue1.png" alt="Ligue 1 Logo" width="450" />
 </div>
 <!-- markdownlint-enable MD033 -->
 
-# Case Study: Dynamic Ligue 1 Dashboard (Vibe Coding)
+# Master Course: Dynamic Ligue 1 Dashboard
 
-This document is the **complete chronological documentary** of the Ligue 1 Dashboard project. It follows the **Vibe Coding** philosophy—a paradigm where AI orchestrates the entire lifecycle of a product, from strategic framing to deployment.
-
-This README is designed as an educational tutorial, showcasing every prompt, every technical decision, and every visual asset used to build this high-performance data application.
+Welcome to the **complete chronological handbook** for the Ligue 1 Dashboard project. This project is not just a dashboard—it is a live demonstration of the **Vibe Coding** philosophy. It shows how an AI developer (Antigravity) orchestrates the entire lifecycle of a tech product: from market framing and UI audit to fullstack development and industrial deployment.
 
 ---
 
-## Technical Stack
+## Technical Core
 
-| Category | Technology Stack |
+| Layer | Implementation |
 |---|---|
-| **Frontend** | Vanilla JavaScript, CSS3 (Custom Design System), HTML5 |
-| **Backend** | Node.js (Vercel Serverless Functions) |
-| **Data Source** | [football-data.org](https://api.football-data.org/v4) API (v4) |
-| **Orchestration** | Antigravity AI Agentic System |
+| **Philosophy** | AI-First (Vibe Coding) |
+| **Interface** | Vanilla JavaScript & Modular CSS |
+| **Security** | Vercel Serverless Proxy |
+| **Data** | Football-Data.org API (v4) |
 
 ---
 
-## I. Strategic Framing (Axis 1)
+## 1. Strategic Framing (Phase 1)
 
-The mission: Create a **single-page dashboard** for the French Ligue 1, focusing on real-time data visualization and a premium "Sport-Tech" aesthetic.
+Every project begins with a clear **Intention**. We refused "Feature Creep" and defined a strict MVP scope to ensure a premium delivery within record time.
 
-### 1. Project Specifications
-We defined the project guardrails in the [projet.md](docs/I. Cadrage stratégique/projet.md) file to prevent "feature creep" and ensure a polished MVP delivery.
+### The Source of Truth: `projet.md`
+We established our guardrails in [projet.md](docs/I. Cadrage stratégique/projet.md). 
+The goal: **"A single-page, high-density dashboard for Ligue 1."**
 
-> [!IMPORTANT]
-> **MVP Scope**: 
-> - Single view experience.
-> - High-density KPIs.
-> - Dynamic Standings Table.
-> - 4 Key Statistical Visualizations.
-> - **Zero** complex navigation or secondary pages.
-
-### 2. Strategic Deliverable
-The roadmap was synthesized into a visual framing document.
-
+**Strategic Deliverable**
+This document summarizes the market positioning and the functional blocks recognized by the AI.
 <div align="center">
   <img src="docs/I. Cadrage stratégique/Livrable.png" alt="Strategic Framing Deliverable" width="100%" />
 </div>
 
 ---
 
-## II. Visual Creations & UI/UX (Axis 2)
+## 2. Visual Audit: The FootX Benchmark (Phase 2)
 
-We chose a "Dark Sport-Tech" aesthetic, heavily inspired by professional sports data portals like **FootX.fr**.
+To avoid a "generic" feel, we audited **FootX.fr**, a gold standard in sports data visualization. We captured 5 key views to teach our AI the specific "Data DNA" of French football.
 
-### 1. Benchmarking the Reference (FootX)
-We performed an exhaustive audit of FootX's UI patterns to extract its "Data DNA."
-
-**Ref 1: Home Narrative Page**
+**Ref A: Landing Experience Hierarchy**
 <div align="center">
-  <img src="docs/II. Créations graphiques/references/screenshots_footx/footx_landing.png" alt="FootX Landing Page Benchmark" width="100%" />
+  <img src="docs/II. Créations graphiques/references/screenshots_footx/footx_landing.png" alt="FootX Landing Benchmark" width="100%" />
 </div>
 
-**Ref 2: Ligue 1 Ranking Structure**
+**Ref B: Data-Dense Ranking Table**
 <div align="center">
-  <img src="docs/II. Créations graphiques/references/screenshots_footx/footx_ranking.png" alt="FootX Ranking Table Benchmark" width="100%" />
+  <img src="docs/II. Créations graphiques/references/screenshots_footx/footx_ranking.png" alt="FootX Ranking Benchmark" width="100%" />
 </div>
 
-**Ref 3: Recent Results Density**
+**Ref C: Scoring & Result Density**
 <div align="center">
   <img src="docs/II. Créations graphiques/references/screenshots_footx/footx_results.png" alt="FootX Results Benchmark" width="100%" />
 </div>
 
-**Ref 4: Upcoming Match Cards**
+**Ref D: Matchday Schedule Rhythm**
 <div align="center">
   <img src="docs/II. Créations graphiques/references/screenshots_footx/footx_upcoming.png" alt="FootX Upcoming Matches Benchmark" width="100%" />
 </div>
 
-**Ref 5: Advanced Data Analysis**
+**Ref E: Advanced Analytical Blocks**
 <div align="center">
-  <img src="docs/II. Créations graphiques/references/screenshots_footx/footx_data.png" alt="FootX Analysis Benchmark" width="100%" />
+  <img src="docs/II. Créations graphiques/references/screenshots_footx/footx_data.png" alt="FootX Data Analysis Benchmark" width="100%" />
 </div>
 
-### 2. Design System Engineering
-Based on these assets, we generated the [theme.md](docs/II. Créations graphiques/theme.md) document using a "Canonical UI Prompt."
+### Engineering the UI Prompt
+We didn't just tell the AI to "make it dark." We provided an exhaustive audit prompt.
 
-**The Canonical Prompt Excerpt:**
-> "You are a UI/UX expert specializing in dark-mode data dashboards. Produce a `theme.md` document based *only* on the provided FootX captures. Define HEX colors, typography scales, and component specifications."
+> [!TIP]
+> **Mega-Prompt Restoration**: The full design audit prompt is saved in [prompt_design.md](docs/II. Créations graphiques/prompt_design.md). It instructs the AI to sample HEX codes and spacing scales directly from the benchmark images.
 
+**AI Processing View**
 <div align="center">
-  <img src="docs/II. Créations graphiques/prompt_design.png" alt="UI Prompt Engineering Process" width="100%" />
+  <img src="docs/II. Créations graphiques/prompt_design.png" alt="AI UI Audit Workflow" width="100%" />
 </div>
 
-### 3. Final Design Tokens
-The result is a strict set of design tokens that power the entire CSS layer.
+### The Final Design Tokens
+The result is [theme.md](docs/II. Créations graphiques/theme.md), our visual constitution.
 
 <div align="center">
-  <img src="docs/II. Créations graphiques/livrable.png" alt="Final Design System Deliverable" width="100%" />
+  <img src="docs/II. Créations graphiques/livrable.png" alt="Final Design System" width="100%" />
 </div>
-
-**Primary Palette:**
-- **Background**: `#0B0D10` (Deep Space Dark)
-- **Accents**: `#00E676` (Neo Green), `#2979FF` (Energy Blue)
-- **Text**: `#F5F7FA` (High Contrast White)
 
 ---
 
-## III. Data Architecture & API (Axis 3)
+## 3. Data Infrastructure & API Validation (Phase 3)
 
-The dashboard is "Live-Mocked": it uses real production data but optimizes it for performance via local caching and proxying.
+The dashboard is "Live-Mocked": it uses real production data from **football-data.org (v4)**.
 
-### 1. API Discovery & Credentials
-We explored the **football-data.org** portal to secure an `X-Auth-Token`.
-
+**API Provider Exploration**
 <div align="center">
-  <img src="docs/III. Architecture & API/api_docs/api_quickstart_assets/logo.jpg" alt="API Provider Exploration" width="300" />
+  <img src="docs/III. Architecture & API/api_docs/api_quickstart_assets/logo.jpg" alt="Provider Exploration" width="300" />
 </div>
 
-**Registration Process:**
+**Step-by-Step API Setup**
 <div align="center">
-  <img src="docs/III. Architecture & API/api_docs/screenshots/api_landing.png" alt="API Portal Home" width="100%" />
+  <img src="docs/III. Architecture & API/api_docs/screenshots/api_landing.png" alt="API Portal" width="100%" />
 </div>
 
 <div align="center">
-  <img src="docs/III. Architecture & API/api_docs/screenshots/api_register.png" alt="API Registration Flow" width="100%" />
+  <img src="docs/III. Architecture & API/api_docs/screenshots/api_register.png" alt="API Registration" width="100%" />
+</div>
+
+<div align="center">
+  <img src="docs/III. Architecture & API/api_docs/screenshots/api_profile.png" alt="User Profile" width="100%" />
 </div>
 
 <div align="center">
   <img src="docs/III. Architecture & API/api_docs/screenshots/api_key.md.png" alt="API Key Management" width="100%" />
 </div>
 
-> [!CAUTION]
-> **API Limits Audit**: The free tier restricts usage to **10 calls per minute**. Our architecture implements a "Batch and Static" loading strategy to never trigger 429 errors.
+> [!IMPORTANT]
+> **Quota Warning**: The free tier allows **10 calls/min**. Our [architecture.md](docs/III. Architecture & API/architecture.md) implements a strict caching strategy to avoid API lockouts.
 
-### 2. Postman Validation Suite
-We validated the raw JSON structures before writing any code.
+---
 
-**Step A: Testing League Meta**
+## 4. Postman Validation Suite (Phase 4)
+
+Before coding, we validated every single JSON structure. This is the **"Postman First"** strategy.
+
+**Importing the Collection**
 <div align="center">
-  <img src="docs/III. Architecture & API/postman/screenshots/postman_get_competition.png" alt="Postman Call: Competition Meta" width="100%" />
+  <img src="docs/III. Architecture & API/api_docs/screenshots/api_postman_collection.png" alt="Postman Collection Discovery" width="400" />
+  <img src="docs/III. Architecture & API/postman/screenshots/postman_import.png" alt="Collection Import" width="400" />
 </div>
 
-**Step B: Testing Standings Complexity**
+**Exhaustive Connectivity Tests**
 <div align="center">
-  <img src="docs/III. Architecture & API/postman/screenshots/postman_get_standings.png" alt="Postman Call: Team Standings" width="100%" />
+  <img src="docs/III. Architecture & API/postman/screenshots/postman_get_competition.png" alt="Verifying Competition Meta" width="100%" />
 </div>
 
-**Step C: Validating Teams & Icons**
 <div align="center">
-  <img src="docs/III. Architecture & API/postman/screenshots/postman_get_teams.png" alt="Postman Call: Team Assets" width="100%" />
+  <img src="docs/III. Architecture & API/postman/screenshots/postman_get_standings.png" alt="Verifying League Standings" width="100%" />
 </div>
 
-**Exporting JSON Samples:**
-We saved the production responses to verify keys like `goalsFor`, `points`, and `crest`.
-[Access Samples Folder](docs/III. Architecture & API/postman/samples/)
+<div align="center">
+  <img src="docs/III. Architecture & API/postman/screenshots/postman_get_teams.png" alt="Verifying Team Assets" width="100%" />
+</div>
 
-### 3. Technical Blueprint
-The [architecture.md](docs/III. Architecture & API/architecture.md) maps every API field to its UI counterpart.
+**Exporting Production JSON Samples**
+We saved the live responses to build an offline data layer.
+[View Mock Data Folder](mock/)
 
 <div align="center">
-  <img src="docs/III. Architecture & API/livrable.png" alt="Technical Architecture Mapping" width="100%" />
+  <img src="docs/III. Architecture & API/postman/screenshots/postman_save_json.png" alt="Saving JSON Mock Samples" width="100%" />
 </div>
 
 ---
 
-## IV. Context Engineering (Axis 4)
+## 5. Technical Blueprint (Phase 5)
 
-We scaffolded the project to provide the AI agent with a perfect internal structure.
+We established the architecture using a decoupled client-proxy model.
 
-### 1. Project Repository Tree
-The final arborescence follows a modular approach.
+### Request Flow Diagram (Mermaid)
 
-```text
-dashboard/
-├── api/             # Vercel Serverless Proxy
-├── docs/            # Strategic Knowledge Base
-├── public/          # Main Interface
-│   ├── app.js       # Logic Engine
-│   ├── index.html   # Main Structure
-│   └── style.css    # Design System Implementation
-└── server.js        # Local Development Node Server
+```mermaid
+graph LR
+    U([Browser]) -- Requests --> P[Vercel Serverless Proxy]
+    P -- Sanitizes --> A[Football-Data API]
+    A -- JSON Response --> P
+    P -- Dynamic Data --> U
 ```
 
-### 2. Building the "Mental Map" for AI
-We used "Mega-Prompts" to inject the technical and strategic context into the coding agent.
+### The Visual Blueprint
+Mapping UI components to API collections as defined in [architecture.md](docs/III. Architecture & API/architecture.md).
 
-**Prompt A: The Global Architecture**
 <div align="center">
-  <img src="docs/IV. Context Engineering/Contexte/prompt_architecture.png" alt="Architecture Injection Prompt" width="100%" />
-</div>
-
-**Prompt B: The Data Mapping Engine**
-<div align="center">
-  <img src="docs/IV. Context Engineering/Contexte/prompt_data.png" alt="Data Mapping Logic Prompt" width="100%" />
+  <img src="docs/III. Architecture & API/livrable.png" alt="Data-to-UI Mapping Blueprint" width="100%" />
 </div>
 
 ---
 
-## V. Vibe Coding Implementation (Axis 5)
+## 6. Context Engineering: Scaffolding (Phase 6)
 
-The implementation was done in phases, moving from the "Invisible" (Backend) to the "Visible" (Frontend).
+We didn't just start writing files. We built a project structure that is "AI-Transparent."
 
-### 1. The Secure Proxy (`api/proxy.js`)
-We hid the API key in environment variables and routed all requests through a Vercel Function.
+### Project Arborescence
+```text
+dashboard/
+├── api/             # Vercel Secure Proxy (Node.js)
+├── docs/            # Master Knowledge Base
+├── mock/            # Local JSON Mock Samples
+├── public/          # Production UI
+│   ├── app.js       # Data Hydration Engine
+│   ├── index.html   # Semantic Structure
+│   └── style.css    # Sport-Tech CSS System
+└── server.js        # Local Dev Node Server
+```
+
+### The Scaffolding Prompts
+To build this, we provided the AI with two massive logic injections.
+
+**Prompt A: Architecture Injection**
+<div align="center">
+  <img src="docs/IV. Context Engineering/Contexte/prompt_architecture.png" alt="Architecture Scaffolding Mega-Prompt" width="100%" />
+</div>
+
+**Prompt B: Data Mapping Injection**
+<div align="center">
+  <img src="docs/IV. Context Engineering/Contexte/prompt_data.png" alt="Data Logic Mega-Prompt" width="100%" />
+</div>
+
+---
+
+## 7. Build Implementation (Phase 7)
+
+### Step 1: Secure API Proxy (`api/proxy.js`)
+We hid the secret `API_KEY` in environment variables and created a Node runtime to bypass CORS and secure the key.
 
 ```javascript
+// Restoration of the Secure Proxy Logic
 export default async function handler(req, res) {
     const { endpoint } = req.query;
-    const API_KEY = process.env.API_KEY;
+    const API_KEY = process.env.API_KEY; // Managed by Vercel
     const response = await fetch(`https://api.football-data.org/v4${endpoint}`, {
         headers: { 'X-Auth-Token': API_KEY }
     });
@@ -213,58 +232,54 @@ export default async function handler(req, res) {
 }
 ```
 
-### 2. The Data Engine (`public/app.js`)
-A monolithic logic layer that handles fetching, mapping, and rendering.
+### Step 2: The UI Engine (`public/app.js`)
+We built a custom engine to map the complex JSON response to our HTML cards.
 
 ```javascript
+/* Data Hydration Logic */
 async function loadDashboard() {
-    const standings = await fetchAPI('/competitions/FL1/standings');
-    const matches = await fetchAPI('/competitions/FL1/matches?season=2025');
+    const standingsData = await apiFetch('/competitions/FL1/standings');
+    const matchesData = await apiFetch('/competitions/FL1/matches?season=2025');
     
-    renderKPIs(standings, matches);
-    renderTable(standings);
-    renderCharts(standings, matches);
+    document.getElementById('standings-table').innerHTML = renderTable(standingsData);
+    document.getElementById('kpi-container').innerHTML = renderKPIs(standingsData, matchesData);
 }
 ```
 
-### 3. The Design Layer (`public/style.css`)
-Applying the [theme.md](docs/II. Créations graphiques/theme.md) tokens via CSS variables.
+### Step 3: Dark Mode Design System (`public/style.css`)
+We implemented the [theme.md](docs/II. Créations graphiques/theme.md) tokens using CSS custom properties.
 
 ```css
 :root {
   --bg-primary: #0B0D10;
   --surface-1: #161A1F;
-  --accent-primary: #00E676;
+  --accent-primary: #00E676; /* Ligue 1 Green */
 }
 
-.kpi-card {
-  background: var(--surface-1);
-  border: 1px solid var(--border-default);
-}
+body { background-color: var(--bg-primary); }
+.card { background-color: var(--surface-1); border: 1px solid #2a2f36; }
 ```
 
 ---
 
-## VI. Final Delivery & Deployment
+## 8. Final Delivery & Deployment
 
-The project is live on Vercel, synchronized with a private GitHub repository for continuous integration.
-
-### Final Dashboard View
-The application delivers on every promise: high density, premium aesthetics, and real-time accuracy.
+The result is a fully functional, high-density football dashboard.
 
 <div align="center">
-  <img src="docs/V. Vibecoding/Livrable.png" alt="Final Dynamic Dashboard" width="100%" />
+  <img src="docs/V. Vibecoding/Livrable.png" alt="Final Dashboard Delivery" width="100%" />
+</div>
+
+### Deployment Monitoring
+The project is live, synchronized with a private GitHub repository for CI/CD.
+
+<div align="center">
+  <img src="docs/V. Vibecoding/Deployement/repo-vercel.png" alt="Vercel Monitoring" width="300" />
+  <img src="docs/V. Vibecoding/Deployement/vercel.png" alt="Live Deployment Success" width="300" />
 </div>
 
 ---
 
-## Technical Resources
-
-- **Full Documentation Portal**: [docs/README.md](docs/README.md)
-- **API Reference**: [docs/III. Architecture & API/architecture.md](docs/III. Architecture & API/architecture.md)
-- **UI Specification**: [docs/II. Créations graphiques/theme.md](docs/II. Créations graphiques/theme.md)
-
----
 <p align="center">
-  <i>"Football Data, Defined by Strategy, Pushed by Vibe." — Documented by Antigravity.</i>
+  <i>"Football Data, Defined by Strategy, Pushed by Vibe." — Course Documented by Antigravity.</i>
 </p>
