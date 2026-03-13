@@ -64,7 +64,11 @@ All the strategic research was synthesized into a visual framing document that a
 > *Objective: Develop a production-ready dashboard for French Ligue 1.*
 > *Context: Use high-density data visualization to provide immediate KPI insights.*
 
----
+> **Strategic Prompt (AI Input):**
+> *"Act as a Senior Data Engineer. Analyze the Ligue 1 API limits (10 req/min) and design a high-density dashboard that avoids 'Feature Creep'. Prioritize standings and statistical bar charts. The aesthetic must be 'FootX-Dark'—ultra-professional and data-dense."*
+
+> **AI Core Decision (Orchestration):**
+> *"I have mapped the MVP to 4 specific endpoints. To respect the Free Tier, I will implement a Server-Side Proxy on Vercel to handle the `X-Auth-Token` securely. Visualizations will be restricted to 4 high-impact charts to maintain single-page focus. Strategy locked."*
 
 ---
 
