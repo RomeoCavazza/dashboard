@@ -363,33 +363,33 @@ The dashboard was built in a **vibecoding** session using **Antigravity** (Micro
 ### Step 1: Welcome & Onboarding
 Landing and first steps inside the Antigravity environment.
 <div align="center">
-  <img src="../supplément/screenshots/antigravity_landing.png" alt="Antigravity Landing" width="100%" />
-  <img src="../supplément/screenshots/antigravity_welcome.png" alt="Antigravity Welcome" width="100%" />
-  <img src="../supplément/screenshots/antigravity_onboarding.png" alt="Antigravity Onboarding" width="100%" />
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_landing.png" alt="Antigravity Landing" width="100%" />
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_welcome.png" alt="Antigravity Welcome" width="100%" />
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_onboarding.png" alt="Antigravity Onboarding" width="100%" />
 </div>
 
 ### Step 2: Project Setup & Context Loading
 Creating a new project and loading the strategy/context so the agent stays aligned with the specs.
 <div align="center">
-  <img src="../supplément/screenshots/antigravity_new_project.png" alt="Antigravity New Project" width="100%" />
-  <img src="../supplément/screenshots/antigravity_load-context.png" alt="Antigravity Load Context" width="100%" />
-  <img src="../supplément/screenshots/antigravity_donwload.png" alt="Antigravity Download / Setup" width="100%" />
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_new_project.png" alt="Antigravity New Project" width="100%" />
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_load-context.png" alt="Antigravity Load Context" width="100%" />
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_donwload.png" alt="Antigravity Download / Setup" width="100%" />
 </div>
 
 ### Step 3: Prompting & Execution
 Guiding the LLM with clear instructions and running the app locally.
 <div align="center">
-  <img src="../supplément/screenshots/antigravity_prompting.png" alt="Antigravity Prompting" width="100%" />
-  <img src="../supplément/screenshots/antigravity_launch_node.png" alt="Antigravity Launch Node" width="100%" />
-  <img src="../supplément/screenshots/antigravity_reload_window.png" alt="Antigravity Reload Window" width="100%" />
-  <img src="../supplément/screenshots/antigravity_localhost_not_found.png" alt="Antigravity Localhost Debug" width="100%" />
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_prompting.png" alt="Antigravity Prompting" width="100%" />
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_launch_node.png" alt="Antigravity Launch Node" width="100%" />
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_reload_window.png" alt="Antigravity Reload Window" width="100%" />
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_localhost_not_found.png" alt="Antigravity Localhost Debug" width="100%" />
 </div>
 
 ### Step 4: Code Complete & Final Results
 Once the agent has finished generating and wiring the code, you get a runnable app and a clear view of the deliverable.
 <div align="center">
-  <img src="../supplément/screenshots/antigravity_finish_code.png" alt="Antigravity Finish Code" width="100%" />
-  <img src="../supplément/screenshots/antigravity_final_results.png" alt="Antigravity Final Results" width="100%" />
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_finish_code.png" alt="Antigravity Finish Code" width="100%" />
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_final_results.png" alt="Antigravity Final Results" width="100%" />
 </div>
 
 ---
@@ -401,8 +401,8 @@ The transition from a local development environment to a live, production-grade 
 ### Prerequisite: Installing Git
 To sync with GitHub and deploy, you need Git on your machine. Download the installer from the official site and follow the wizard.
 <div align="center">
-  <img src="../supplément/05_deploiement/git/git-download-page.png" alt="Git Download Page" width="100%" />
-  <img src="../supplément/05_deploiement/git/git-installer-wizard.jpg" alt="Git Installer Wizard" width="100%" />
+  <img src="docs/VIII.%20Deploiement/git/git-download-page.png" alt="Git Download Page" width="100%" />
+  <img src="docs/VIII.%20Deploiement/git/git-installer-wizard.jpg" alt="Git Installer Wizard" width="100%" />
 </div>
 
 ### 8.1. GitHub: Version Control & Remote Sync
@@ -410,22 +410,22 @@ Once you are satisfied with your implementation, synchronize your local workspac
 
 **Step 8.1.1: Sign up and land on GitHub**
 <div align="center">
-  <img src="../supplément/05_deploiement/github/github-sign-up.png" alt="GitHub Sign Up" width="100%" />
-  <img src="../supplément/05_deploiement/github/github-landing.png" alt="GitHub Landing" width="100%" />
+  <img src="docs/VIII.%20Deploiement/github/github-sign-up.png" alt="GitHub Sign Up" width="100%" />
+  <img src="docs/VIII.%20Deploiement/github/github-landing.png" alt="GitHub Landing" width="100%" />
 </div>
 
 **Step 8.1.2: Create a new repository**
 <div align="center">
-  <img src="../supplément/05_deploiement/github/github-create-repo.png" alt="GitHub Create Repo" width="100%" />
-  <img src="../supplément/05_deploiement/github/github-repo-empty.png" alt="GitHub Repo Empty" width="100%" />
+  <img src="docs/VIII.%20Deploiement/github/github-create-repo.png" alt="GitHub Create Repo" width="100%" />
+  <img src="docs/VIII.%20Deploiement/github/github-repo-empty.png" alt="GitHub Repo Empty" width="100%" />
 </div>
 
 **Step 8.1.3: Push your code and confirm**
 > **Instruction**: Run `git add .`, `git commit -m "feat: finalize dashboard specs"`, and `git push origin main` to sync your project.
 
 <div align="center">
-  <img src="../supplément/05_deploiement/github/github-dashboard.png" alt="GitHub Dashboard" width="100%" />
-  <img src="../supplément/05_deploiement/github/github-repo-full.png" alt="GitHub Repo Full" width="100%" />
+  <img src="docs/VIII.%20Deploiement/github/github-dashboard.png" alt="GitHub Dashboard" width="100%" />
+  <img src="docs/VIII.%20Deploiement/github/github-repo-full.png" alt="GitHub Repo Full" width="100%" />
   <img src="docs/III.%20Architecture%20%26%20API/github.png" alt="GitHub Synchronization" width="100%" />
 </div>
 
@@ -434,22 +434,22 @@ With your code on GitHub, use Vercel to host the app and get a public URL, with 
 
 **Step 8.2.1: Register and land on Vercel**
 <div align="center">
-  <img src="../supplément/05_deploiement/vercel/vercel_register.png" alt="Vercel Register" width="100%" />
-  <img src="../supplément/05_deploiement/vercel/vercel_landing.png" alt="Vercel Landing" width="100%" />
+  <img src="docs/VIII.%20Deploiement/vercel/vercel_register.png" alt="Vercel Register" width="100%" />
+  <img src="docs/VIII.%20Deploiement/vercel/vercel_landing.png" alt="Vercel Landing" width="100%" />
 </div>
 
 **Step 8.2.2: Create a new project and first deploy**
 <div align="center">
-  <img src="../supplément/05_deploiement/vercel/vercel_new_project.png" alt="Vercel New Project" width="100%" />
-  <img src="../supplément/05_deploiement/vercel/vercel_first_deploy.png" alt="Vercel First Deploy" width="100%" />
-  <img src="../supplément/05_deploiement/vercel/vercel_second_deploy.png" alt="Vercel Second Deploy" width="100%" />
+  <img src="docs/VIII.%20Deploiement/vercel/vercel_new_project.png" alt="Vercel New Project" width="100%" />
+  <img src="docs/VIII.%20Deploiement/vercel/vercel_first_deploy.png" alt="Vercel First Deploy" width="100%" />
+  <img src="docs/VIII.%20Deploiement/vercel/vercel_second_deploy.png" alt="Vercel Second Deploy" width="100%" />
 </div>
 
 **Step 8.2.3: Configure API key and environment**
 <div align="center">
-  <img src="../supplément/05_deploiement/vercel/vercel_dashboard.png" alt="Vercel Dashboard" width="100%" />
-  <img src="../supplément/05_deploiement/vercel/vercel_env.png" alt="Vercel Env" width="100%" />
-  <img src="../supplément/05_deploiement/vercel/vercel_add_env.png" alt="Vercel Add Env" width="100%" />
+  <img src="docs/VIII.%20Deploiement/vercel/vercel_dashboard.png" alt="Vercel Dashboard" width="100%" />
+  <img src="docs/VIII.%20Deploiement/vercel/vercel_env.png" alt="Vercel Env" width="100%" />
+  <img src="docs/VIII.%20Deploiement/vercel/vercel_add_env.png" alt="Vercel Add Env" width="100%" />
 </div>
 
 <div align="center">
@@ -461,8 +461,8 @@ The project is now live. You have taken a complex requirement—from a visual be
 
 <div align="center">
   <img src="docs/V.%20Vibecoding/Livrable.png" alt="Final Dashboard Delivery" width="100%" />
-  <img src="../supplément/05_deploiement/web-desktop.png" alt="Dashboard Desktop" width="100%" />
-  <img src="../supplément/05_deploiement/web-mobile.png" alt="Dashboard Mobile" width="100%" />
+  <img src="docs/VIII.%20Deploiement/web-desktop.png" alt="Dashboard Desktop" width="100%" />
+  <img src="docs/VIII.%20Deploiement/web-mobile.png" alt="Dashboard Mobile" width="100%" />
 </div>
 
 ---
