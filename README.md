@@ -64,9 +64,7 @@ All the strategic research was synthesized into a visual framing document that a
 > *Objective: Develop a production-ready dashboard for French Ligue 1.*
 > *Context: Use high-density data visualization to provide immediate KPI insights.*
 
-<div align="center">
-  <img src="docs/V.%20Vibecoding/Livrable.png" alt="Strategic Framing Deliverable" width="100%" />
-</div>
+---
 
 ---
 
