@@ -364,46 +364,60 @@ async function loadDashboard() {
 
 ---
 
-### 7.2 Vibecoding Session (How We Built It with Antigravity)
+### 7.2 Vibecoding Session (Phase-by-Phase with Antigravity)
 
-The following screenshots document the **Antigravity** workflow from first launch to a running dashboard—so you can reproduce or adapt the flow.
+The following sequence documents the **Antigravity** workflow. Each step represents a distinct action in the AI-orchestrated development cycle.
 
+**Step 7.2.1: Welcome & Setup**
+First contact with the agent in the coding environment—initializing the collaborative space and role definition.
+<div align="center">
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_welcome.png" alt="Antigravity Welcome" width="100%" />
+</div>
 
-**7.2.2 — Project Setup & Context Loading**  
-Create a new project and load the strategy/context so the agent follows the same specs (architecture, data, design): new project creation, loading context (docs, architecture, theme) so the LLM stays aligned, and download/setup step for dependencies. Screenshots below.
+**Step 7.2.2: Strategic Initialization**
+Creating the project shell and choosing the base template for the Ligue 1 dashboard.
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_new_project.png" alt="Antigravity New Project" width="100%" />
 </div>
 
+**Step 7.2.3: Context Injection**
+Loading the strategy, architecture, and design docs so the agent understands the technical "Contract."
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_load-context.png" alt="Antigravity Load Context" width="100%" />
 </div>
 
-**7.2.3 — Prompting & Execution**  
-Guiding the agent with clear instructions and running the app locally: prompting with concrete tasks (e.g. implement proxy, wire data), launching the Node dev server, reloading the window or preview after changes, and handling the typical "localhost not found" moment (port or server not ready). Screenshots below.
+**Step 7.2.4: Natural Language Prompting**
+Guiding the agent with a concrete prompt to implement the proxy and feed the data engine.
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_prompting.png" alt="Antigravity Prompting" width="100%" />
 </div>
 
+**Step 7.2.5: Autonomous Code Output**
+The agent completes the generation of the three core artifacts (proxy, app logic, and CSS).
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_finish_code.png" alt="Antigravity Finish Code" width="100%" />
 </div>
 
-<div align="center">
-  <img src="docs/V.%20Vibecoding/screenshots/antigravity_localhost_not_found.png" alt="Antigravity Localhost Debug" width="100%" />
-</div>
-
+**Step 7.2.6: Local Server Launch**
+Executing the Node.js backend to start the development environment.
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_launch_node.png" alt="Antigravity Launch Node" width="100%" />
 </div>
 
+**Step 7.2.7: Browser Synchronization**
+Refreshing the preview window to sync the newly written logic with the browser runtime.
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_reload_window.png" alt="Antigravity Reload Window" width="100%" />
 </div>
 
-**7.2.4 — Code Complete & Final Results**  
-Agent has generated and wired the code; the app runs and the deliverable is visible — code completion (proxy, app.js, CSS in place) and final result (Ligue 1 dashboard running locally, ready for deployment). Screenshots below.
+**Step 7.2.8: Debugging & Resolution**
+Handling the "Localhost" connection hand-off to ensure the server is ready for traffic.
+<div align="center">
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_localhost_not_found.png" alt="Antigravity Localhost Debug" width="100%" />
+</div>
 
+**Step 7.2.9: Final Validated Build**
+The dashboard is now running locally with real data, fully mapped and styled according to specs.
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_final_results.png" alt="Antigravity Final Results" width="100%" />
 </div>
@@ -424,65 +438,78 @@ To sync with GitHub and deploy, you need Git on your machine. Download the insta
   <img src="docs/VIII.%20Deploiement/git/git-installer-wizard.jpg" alt="Git Installer Wizard" width="100%" />
 </div>
 
-### 8.1. GitHub: Version Control & Remote Sync
-Once you are satisfied with your implementation, synchronize your local workspace with the remote repository so every line of code and documentation is versioned.
+### 8.1 GitHub: Version Control & Remote Sync
 
+Every milestone is versioned and pushed to the remote source of truth.
+
+**Step 8.1.1: Repository Creation**
+Setting up the destination—initializing a new repository to host the project core.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/github/github-create-repo.png" alt="GitHub Create Repo" width="100%" />
 </div>
 
+**Step 8.1.2: First Sync State**
+The empty repository state, ready to receive the first commit of the dashboard files.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/github/github-repo-empty.png" alt="GitHub Repo Empty" width="100%" />
 </div>
 
-**Step 8.1.3: Push your code and confirm**  
-Run `git add .`, `git commit -m "feat: finalize dashboard specs"`, and `git push origin main`. Below: GitHub dashboard, repo after push, and sync workflow.
-> **Instruction**: Run `git add .`, `git commit -m "feat: finalize dashboard specs"`, and `git push origin main` to sync your project.
-
-
+**Step 8.1.3: Remote Code Validation**
+Confirming that all folders (api, docs, public) are correctly synchronized on the server.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/github/github-repo-full.png" alt="GitHub Repo Full" width="100%" />
 </div>
 
+**Step 8.1.4: Sync Continuity**
+Ensuring the local and remote states are perfectly aligned for industrial deployment.
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/github.png" alt="GitHub Synchronization" width="100%" />
 </div>
 
-### 8.2. Vercel: Production Deployment
-With your code on GitHub, use Vercel to host the app and get a public URL, with the secure proxy and API key managed via environment variables.
+---
 
-**Step 8.2.1: Register and land on Vercel**  
-Sign up with GitHub, then land on the Vercel dashboard to add a new project (screenshots below).
+### 8.2 Vercel: Production Deployment
 
+Transforming the repository into a live, industrial-grade web application.
+
+**Step 8.2.1: Project Import**
+Connecting the GitHub repository to the Vercel platform to initiate the cloud build.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_landing.png" alt="Vercel Landing" width="100%" />
 </div>
 
-**Step 8.2.2: Create a new project and first deploy**  
-Import from GitHub, select the dashboard repo; first deploy may fail until env vars are set, then add API_KEY and deploy again (screenshots below).
+**Step 8.2.2: Build Configuration**
+Defining the framework and directory structure for the serverless deployment.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_new_project.png" alt="Vercel New Project" width="100%" />
 </div>
 
+**Step 8.2.3: Initial Deployment Trace**
+Triggering the first build cycle—observing the initial output before environment setup.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_first_deploy.png" alt="Vercel First Deploy" width="100%" />
 </div>
 
-<div align="center">
-  <img src="docs/VIII.%20Deploiement/vercel/vercel_second_deploy.png" alt="Vercel Second Deploy" width="100%" />
-</div>
-
-**Step 8.2.3: Configure API key and environment**  
-In the project dashboard, open environment variables, add API_KEY (football-data.org key), then redeploy. Below: project dashboard, env list, and add-env flow.
-
+**Step 8.2.4: Environment Variable Setup**
+Accessing the project settings to inject the required production credentials.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_env.png" alt="Vercel Env" width="100%" />
 </div>
 
+**Step 8.2.5: Secure API Token Injection**
+Adding the `X-Auth-Token` as an encrypted variable to the production scope.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_add_env.png" alt="Vercel Add Env" width="100%" />
 </div>
 
+**Step 8.2.6: Production Redeploy**
+Re-running the deployment with the live API key to activate the dashboard.
+<div align="center">
+  <img src="docs/VIII.%20Deploiement/vercel/vercel_second_deploy.png" alt="Vercel Second Deploy" width="100%" />
+</div>
+
+**Step 8.2.7: Industrial Launch**
+The application is now live and fully operational on its production URL.
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/vercel.png" alt="Vercel Deployment Status" width="100%" />
 </div>
