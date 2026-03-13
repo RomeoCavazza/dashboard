@@ -392,14 +392,18 @@ Create a new project and load the strategy/context so the agent follows the same
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_load-context.png" alt="Antigravity Load Context" width="100%" />
 </div>
 
-<div align="center">
-  <img src="docs/V.%20Vibecoding/screenshots/antigravity_donwload.png" alt="Antigravity Download / Setup" width="100%" />
-</div>
-
 **7.2.3 — Prompting & Execution**  
 Guiding the agent with clear instructions and running the app locally: prompting with concrete tasks (e.g. implement proxy, wire data), launching the Node dev server, reloading the window or preview after changes, and handling the typical "localhost not found" moment (port or server not ready). Screenshots below.
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_prompting.png" alt="Antigravity Prompting" width="100%" />
+</div>
+
+<div align="center">
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_finish_code.png" alt="Antigravity Finish Code" width="100%" />
+</div>
+
+<div align="center">
+  <img src="docs/V.%20Vibecoding/screenshots/antigravity_localhost_not_found.png" alt="Antigravity Localhost Debug" width="100%" />
 </div>
 
 <div align="center">
@@ -410,15 +414,8 @@ Guiding the agent with clear instructions and running the app locally: prompting
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_reload_window.png" alt="Antigravity Reload Window" width="100%" />
 </div>
 
-<div align="center">
-  <img src="docs/V.%20Vibecoding/screenshots/antigravity_localhost_not_found.png" alt="Antigravity Localhost Debug" width="100%" />
-</div>
-
 **7.2.4 — Code Complete & Final Results**  
 Agent has generated and wired the code; the app runs and the deliverable is visible — code completion (proxy, app.js, CSS in place) and final result (Ligue 1 dashboard running locally, ready for deployment). Screenshots below.
-<div align="center">
-  <img src="docs/V.%20Vibecoding/screenshots/antigravity_finish_code.png" alt="Antigravity Finish Code" width="100%" />
-</div>
 
 <div align="center">
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_final_results.png" alt="Antigravity Final Results" width="100%" />
@@ -443,18 +440,6 @@ To sync with GitHub and deploy, you need Git on your machine. Download the insta
 ### 8.1. GitHub: Version Control & Remote Sync
 Once you are satisfied with your implementation, synchronize your local workspace with the remote repository so every line of code and documentation is versioned.
 
-**Step 8.1.1: Sign up and land on GitHub**  
-Create an account if needed, then land on the GitHub dashboard (screenshots below).
-<div align="center">
-  <img src="docs/VIII.%20Deploiement/github/github-sign-up.png" alt="GitHub Sign Up" width="100%" />
-</div>
-
-<div align="center">
-  <img src="docs/VIII.%20Deploiement/github/github-landing.png" alt="GitHub Landing" width="100%" />
-</div>
-
-**Step 8.1.2: Create a new repository**  
-Name the repo (e.g. dashboard), set visibility, optional README; then you get an empty repo ready for first push (screenshots below).
 <div align="center">
   <img src="docs/VIII.%20Deploiement/github/github-create-repo.png" alt="GitHub Create Repo" width="100%" />
 </div>
@@ -467,9 +452,6 @@ Name the repo (e.g. dashboard), set visibility, optional README; then you get an
 Run `git add .`, `git commit -m "feat: finalize dashboard specs"`, and `git push origin main`. Below: GitHub dashboard, repo after push, and sync workflow.
 > **Instruction**: Run `git add .`, `git commit -m "feat: finalize dashboard specs"`, and `git push origin main` to sync your project.
 
-<div align="center">
-  <img src="docs/VIII.%20Deploiement/github/github-dashboard.png" alt="GitHub Dashboard" width="100%" />
-</div>
 
 <div align="center">
   <img src="docs/VIII.%20Deploiement/github/github-repo-full.png" alt="GitHub Repo Full" width="100%" />
@@ -484,9 +466,6 @@ With your code on GitHub, use Vercel to host the app and get a public URL, with 
 
 **Step 8.2.1: Register and land on Vercel**  
 Sign up with GitHub, then land on the Vercel dashboard to add a new project (screenshots below).
-<div align="center">
-  <img src="docs/VIII.%20Deploiement/vercel/vercel_register.png" alt="Vercel Register" width="100%" />
-</div>
 
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_landing.png" alt="Vercel Landing" width="100%" />
