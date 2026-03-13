@@ -45,7 +45,7 @@ We established our guardrails in the [projet.md](docs/I.%20Cadrage%20strat%C3%A9
 All the strategic research was synthesized into a visual framing document that allows the team to align on the final product vision before any code is written.
 
 <div align="center">
-  <img src="docs/I.%20Cadrage%20strat%C3%A9gique/Livrable.png" alt="Strategic Framing Deliverable" width="100%" />
+  <img src="docs/V.%20Vibecoding/Livrable.png" alt="Strategic Framing Deliverable" width="100%" />
 </div>
 
 ---
@@ -197,7 +197,7 @@ We saved the live responses into local JSON files to build a "Static Mock" and e
   <img src="docs/III.%20Architecture%20%26%20API/postman/screenshots/postman_save_json.png" alt="Saving JSON Mock Samples" width="100%" />
 </div>
 
-Check the exported samples here: [mock/](./mock/)
+Check the exported samples here: [postman/samples/](docs/III.%20Architecture%20%26%20API/postman/samples/)
 
 ---
 
@@ -233,7 +233,6 @@ We didn't just write files; we built a project structure that is "AI-Transparent
 dashboard/
 ├── api/             # Vercel Secure Proxy (Node.js)
 ├── docs/            # Master Knowledge Base
-├── mock/            # Local JSON Mock Samples
 ├── public/          # Production UI
 │   ├── app.js       # Data Hydration Engine
 │   ├── index.html   # Semantic Structure
