@@ -321,26 +321,10 @@ The result is a fully functional, high-density football dashboard that delivers 
 ### Continuous Deployment
 The project is live, synchronized with GitHub and deployed via Vercel for maximum reliability.
 
-**Vercel Integration & Monitoring**
-We audit the deployment status to ensure the API key is correctly injected in the production environment.
+### Deployment Successful
+The project is live on Vercel, synchronized with our private GitHub repository for a complete Vibe Coding lifecycle.
+
 <div align="center">
-  <img src="docs/III.%20Architecture%20%26%20API/vercel.png" alt="Vercel Monitoring" width="100%" />
+  <img src="docs/III.%20Architecture%20%26%20API/vercel.png" alt="Deployment Success" width="100%" />
 </div>
 
-**Live Sync with GitHub**
-<div align="center">
-  <img src="docs/V.%20Vibecoding/Deployement/vercel.png" alt="Live Deployment Success" width="100%" />
-</div>
-
----
-
-## Technical Resources
-
-- **Framing Specification**: [docs/I.%20Cadrage%20strat%C3%A9gique/projet.md](docs/I.%20Cadrage%20strat%C3%A9gique/projet.md)
-- **UI Architecture**: [docs/III.%20Architecture%20%26%20API/architecture.md](docs/III.%20Architecture%20%26%20API/architecture.md)
-- **Design System**: [docs/II.%20Cr%C3%A9ations%20graphiques/theme.md](docs/II.%20Cr%C3%A9ations%20graphiques/theme.md)
-
----
-<p align="center">
-  <i>"Football Data, Defined by Strategy, Pushed by Vibe." — Course Documented by Antigravity.</i>
-</p>
