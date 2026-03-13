@@ -20,9 +20,9 @@ Welcome to the **complete chronological handbook** for the Ligue 1 Dashboard pro
 | Layer | Implementation |
 |---|---|
 | **Philosophy** | ![AI-Powered](https://img.shields.io/badge/Philosophy-AI--Powered-6366f1?style=flat-square) |
-| **Interface** | ![Vanilla JS](https%3A//img.shields.io/badge/Interface-Vanilla_JS-f7df1e%3Fstyle%3Dflat-square) ![CSS3](https%3A//img.shields.io/badge/Style-CSS3-1572b6%3Fstyle%3Dflat-square) |
-| **Security** | ![Vercel Proxy](https%3A//img.shields.io/badge/Security-Vercel_Proxy-000000%3Fstyle%3Dflat-square) |
-| **Data Engine** | ![API v4](https%3A//img.shields.io/badge/Data-API_v4-2979ff%3Fstyle%3Dflat-square) |
+| **Interface** | ![Vanilla JS](https://img.shields.io/badge/Interface-Vanilla_JS-f7df1e?style=flat-square) ![CSS3](https://img.shields.io/badge/Style-CSS3-1572b6?style=flat-square) |
+| **Security** | ![Vercel Proxy](https://img.shields.io/badge/Security-Vercel_Proxy-000000?style=flat-square) |
+| **Data Engine** | ![API v4](https://img.shields.io/badge/Data-API_v4-2979ff?style=flat-square) |
 
 ---
 
