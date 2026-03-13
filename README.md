@@ -368,19 +368,6 @@ async function loadDashboard() {
 
 The following screenshots document the **Antigravity** workflow from first launch to a running dashboard—so you can reproduce or adapt the flow.
 
-**7.2.1 — Welcome & Onboarding**  
-First contact with the agent: landing (entry point to the AI coding environment), welcome screen (agent's role and how to start a project), and onboarding flow (initial setup and preferences). Screenshots below.
-<div align="center">
-  <img src="docs/V.%20Vibecoding/screenshots/antigravity_landing.png" alt="Antigravity Landing" width="100%" />
-</div>
-
-<div align="center">
-  <img src="docs/V.%20Vibecoding/screenshots/antigravity_welcome.png" alt="Antigravity Welcome" width="100%" />
-</div>
-
-<div align="center">
-  <img src="docs/V.%20Vibecoding/screenshots/antigravity_onboarding.png" alt="Antigravity Onboarding" width="100%" />
-</div>
 
 **7.2.2 — Project Setup & Context Loading**  
 Create a new project and load the strategy/context so the agent follows the same specs (architecture, data, design): new project creation, loading context (docs, architecture, theme) so the LLM stays aligned, and download/setup step for dependencies. Screenshots below.
@@ -487,9 +474,6 @@ Import from GitHub, select the dashboard repo; first deploy may fail until env v
 
 **Step 8.2.3: Configure API key and environment**  
 In the project dashboard, open environment variables, add API_KEY (football-data.org key), then redeploy. Below: project dashboard, env list, and add-env flow.
-<div align="center">
-  <img src="docs/VIII.%20Deploiement/vercel/vercel_dashboard.png" alt="Vercel Dashboard" width="100%" />
-</div>
 
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_env.png" alt="Vercel Env" width="100%" />
