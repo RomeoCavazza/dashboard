@@ -31,7 +31,12 @@ Welcome to the **complete chronological handbook** for the Ligue 1 Dashboard pro
 Every project begins with a clear **Intention**. We refused "Feature Creep" and defined a strict MVP scope to ensure a premium delivery within record time. This phase is crucial as it sets the boundaries for the AI and the developer.
 
 ### 1. Project Specifications
-We established our guardrails in the [projet.md](docs/I.%20Cadrage%20strat%C3%A9gique/projet.md) file. This document acts as the "Contract" between the strategy and the execution. The goal was to build a single-page, high-density dashboard for the French Ligue 1.
+We established our guardrails in the [projet.md](docs/I.%20Cadrage%20strat%C3%A9gique/projet.md) file. This document acts as the "Contract" between the strategy and the execution.
+
+> **Excerpt from projet.md:**
+> *Objective: Develop a production-ready dashboard for French Ligue 1.*
+> *Context: Use high-density data visualization to provide immediate KPI insights for sports analysts.*
+> *Platform: Single Page Application (SPA) with real-time API integration.*
 
 > [!IMPORTANT]
 > **MVP Scope Definition**: 
@@ -85,7 +90,10 @@ Finally, we looked at advanced stats and "Value Picks" to see how to integrate s
 </div>
 
 ### Engineering the UI Prompt
-We didn't just tell the AI to "make it dark." We provided an exhaustive audit prompt to extract specific tokens.
+We didn't just tell the AI to "make it dark." We provided an exhaustive audit prompt to extract specific tokens. 
+
+> **Excerpt from prompt_design.md:**
+> *"You are a Senior UI/UX Designer. Audit the provided screenshots of FootX.fr. Extract the following: Primary Background HEX, Surface Card HEX, Border Radius scaled in PX, and Font Stack hierarchy. Output a JSON design system."*
 
 > [!TIP]
 > **Mega-Prompt Restoration**: The full design audit prompt is saved in [prompt_design.md](docs/II.%20Cr%C3%A9ations%20graphiques/prompt_design.md). It instructs the AI to sample HEX codes, border radii, and spacing scales directly from the benchmark images.
@@ -97,17 +105,25 @@ The AI processes the benchmark images and outputs a structured set of design rul
 </div>
 
 ### The Final Design System
-The result is [theme.md](docs/II.%20Cr%C3%A9ations%20graphiques/theme.md), which serves as our visual constitution throughout the build.
+The result is [theme.md](docs/II.%20Cr%C3%A9ations%20graphiques/theme.md), which serves as our visual constitution.
 
-<div align="center">
-  <img src="docs/II.%20Cr%C3%A9ations%20graphiques/livrable.png" alt="Final Design System" width="100%" />
-</div>
+> **Excerpt from theme.md:**
+> *--primary-green: #00E676;*
+> *--dark-bg: #0B0D10;*
+> *Font: 'Inter', sans-serif;*
+> *Border-radius: 12px;*
 
 ---
 
 ## III. Data Infrastructure & API Validation (Phase 3)
 
 The dashboard is "Live-Mocked": it uses real production data from the **football-data.org (v4)** API.
+
+> **Excerpt from architecture.md:**
+> *Mapping UI components to API collections:*
+> *- Standing Table -> /v4/competitions/FL1/standings*
+> *- Match History -> /v4/competitions/FL1/matches*
+> *- Team Metadata -> /v4/competitions/FL1/teams*
 
 ### Step-by-Step API Setup
 
@@ -193,11 +209,25 @@ Confirming that team crests (logos) are provided as valid URLs that our frontend
 
 **Step 4.7: Exporting Production JSON Samples**
 We saved the live responses into local JSON files to build a "Static Mock" and enable offline development.
-<div align="center">
-  <img src="docs/III.%20Architecture%20%26%20API/postman/screenshots/postman_save_json.png" alt="Saving JSON Mock Samples" width="100%" />
-</div>
 
-Check the exported samples here: [postman/samples/](docs/III.%20Architecture%20%26%20API/postman/samples/)
+```json
+/* Sample from standings_FL1.json */
+{
+  "competition": { "name": "Ligue 1", "code": "FL1" },
+  "season": { "startDate": "2025-08-17", "currentMatchday": 22 },
+  "standings": [
+    {
+      "type": "TOTAL",
+      "table": [
+        { "position": 1, "team": { "name": "Paris Saint-Germain FC" }, "points": 54 },
+        { "position": 2, "team": { "name": "Olympique de Marseille" }, "points": 48 }
+      ]
+    }
+  ]
+}
+```
+
+Check all exported samples here: [postman/samples/](docs/III.%20Architecture%20%26%20API/postman/samples/)
 
 ---
 
@@ -244,13 +274,17 @@ dashboard/
 To build this, we provided the AI with two massive logic injections.
 
 **Step 6.1: Injecting Architecture Rules**
-Providing the AI with the structural roadmap for file creation.
+> **Excerpt from data.md:**
+> *"You are a Senior Data Architect. Map the /v4/competitions/FL1/matches endpoint to the MatchCard component. Ensure the 'status' field is parsed to show 'Live' for IN_PLAY matches."*
+
 <div align="center">
   <img src="docs/IV.%20Context%20Engineering/Contexte/prompt_architecture.png" alt="Architecture Scaffolding Mega-Prompt" width="100%" />
 </div>
 
 **Step 6.2: Injecting Data Mapping Rules**
-Defining exactly how keys from the API (like `playedGames`) should navigate into the DOM.
+> **Excerpt from technical_spec.md:**
+> *"The SPA must handle 10 API calls per minute. Implement an aggressive LocalStorage cache on the /standings endpoint with a 300s TTL."*
+
 <div align="center">
   <img src="docs/IV.%20Context%20Engineering/Contexte/prompt_data.png" alt="Data Logic Mega-Prompt" width="100%" />
 </div>
@@ -338,7 +372,7 @@ The project is live on Vercel, synchronized with our private GitHub repository f
 
 Congratulations! Your **Ligue 1 Dashboard** is fully operational and deployed to the world.
 
-**Live Demo**: [https://dashboard-one-wheat-33.vercel.app/](https://dashboard-one-wheat-33.vercel.app/)
+**Live Demo**: [https://dashboard-one-wheat-33.vercel.app/](https%3A//dashboard-one-wheat-33.vercel.app/)
 
 *This master course demonstrates the peak of AI-orchestrated development. From strategy to production, you have successfully navigated the Vibe Coding workflow.*
 
