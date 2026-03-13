@@ -11,7 +11,7 @@
 
 # Master Course: Dynamic Ligue 1 Dashboard
 
-Welcome to the **complete chronological handbook** for the Ligue 1 Dashboard project. This project is not just a dashboard—it is a live demonstration of the **Vibe Coding** philosophy. It shows how an AI developer (Antigravity) orchestrates the entire lifecycle of a tech product: from market framing and UI audit to fullstack development and industrial deployment.
+Welcome to the **complete chronological handbook** for the Ligue 1 Dashboard project. This project is not just a dashboard—it is a live demonstration of the **AI-Assisted Coding** philosophy. It shows how an AI developer (Antigravity) orchestrates the entire lifecycle of a tech product: from market framing and UI audit to fullstack development and industrial deployment.
 
 ---
 
@@ -19,7 +19,7 @@ Welcome to the **complete chronological handbook** for the Ligue 1 Dashboard pro
 
 | Layer | Implementation |
 |---|---|
-| **Philosophy** | ![Vibe Coding](https%3A//img.shields.io/badge/Philosophy-Vibe_Coding-6366f1%3Fstyle%3Dflat-square) |
+| **Philosophy** | ![AI-Powered](https://img.shields.io/badge/Philosophy-AI--Powered-6366f1?style=flat-square) |
 | **Interface** | ![Vanilla JS](https%3A//img.shields.io/badge/Interface-Vanilla_JS-f7df1e%3Fstyle%3Dflat-square) ![CSS3](https%3A//img.shields.io/badge/Style-CSS3-1572b6%3Fstyle%3Dflat-square) |
 | **Security** | ![Vercel Proxy](https%3A//img.shields.io/badge/Security-Vercel_Proxy-000000%3Fstyle%3Dflat-square) |
 | **Data Engine** | ![API v4](https%3A//img.shields.io/badge/Data-API_v4-2979ff%3Fstyle%3Dflat-square) |
@@ -360,7 +360,7 @@ The project is live, synchronized with GitHub and deployed via Vercel for maximu
 </div>
 
 ### Deployment Successful
-The project is live on Vercel, synchronized with our private GitHub repository for a complete Vibe Coding lifecycle.
+The project is live on Vercel, synchronized with our private GitHub repository for a complete AI-orchestrated lifecycle.
 
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/vercel.png" alt="Deployment Success" width="100%" />
@@ -374,5 +374,5 @@ Congratulations! Your **Ligue 1 Dashboard** is fully operational and deployed to
 
 **Live Demo**: [https://dashboard-one-wheat-33.vercel.app/](https%3A//dashboard-one-wheat-33.vercel.app/)
 
-*This master course demonstrates the peak of AI-orchestrated development. From strategy to production, you have successfully navigated the Vibe Coding workflow.*
+*This master course demonstrates the peak of AI-orchestrated development. From strategy to production, you have successfully navigated the AI-Assisted workflow.*
 
