@@ -46,7 +46,7 @@ We established our guardrails in the [projet.md](docs/I.%20Cadrage%20strat%C3%A9
 > - 4 Key Statistical Visualizations (Bar charts & Histograms).
 > - **Zero** complex navigation to maintain speed and focus.
 
-### 2. Strategic Deliverable
+### Step 1.1: Strategic Synthesis Deliverable
 All the strategic research was synthesized into a visual framing document that allows the team to align on the final product vision before any code is written — a one-pager summarizing scope, KPIs, and product vision (see below).
 
 <div align="center">
@@ -402,39 +402,45 @@ The dashboard is now running locally with real data, fully mapped and styled acc
 
 The transition from a local development environment to a live, production-grade application is the final milestone of the AI-orchestrated lifecycle.
 
-### Prerequisite: Installing Git
-To sync with GitHub and deploy, you need Git on your machine. Download the installer from the official site and follow the wizard (download page and installer wizard below).
+### 7.1 Software Prerequisites
+
+To sync with GitHub and deploy, you need Git on your machine.
+
+**Step 7.1.1: Software Prerequisite (Git Download)**
+Download the installer from the official site (download page below).
 <div align="center">
   <img src="docs/VIII.%20Deploiement/git/git-download-page.png" alt="Git Download Page" width="100%" />
 </div>
 
+**Step 7.1.2: Software Prerequisite (Git Installation)**
+Follow the wizard to complete the installation on your local system (installer wizard below).
 <div align="center">
   <img src="docs/VIII.%20Deploiement/git/git-installer-wizard.jpg" alt="Git Installer Wizard" width="100%" />
 </div>
 
-### 7.1 GitHub: Version Control & Remote Sync
+### 7.2 GitHub: Version Control & Remote Sync
 
 Every milestone is versioned and pushed to the remote source of truth.
 
-**Step 7.1.1: Repository Creation**
+**Step 7.2.1: Repository Creation**
 Setting up the destination—initializing a new repository to host the project core.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/github/github-create-repo.png" alt="GitHub Create Repo" width="100%" />
 </div>
 
-**Step 7.1.2: First Sync State**
+**Step 7.2.2: First Sync State**
 The empty repository state, ready to receive the first commit of the dashboard files.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/github/github-repo-empty.png" alt="GitHub Repo Empty" width="100%" />
 </div>
 
-**Step 7.1.3: Remote Code Validation**
+**Step 7.2.3: Remote Code Validation**
 Confirming that all folders (api, docs, public) are correctly synchronized on the server.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/github/github-repo-full.png" alt="GitHub Repo Full" width="100%" />
 </div>
 
-**Step 7.1.4: Sync Continuity**
+**Step 7.2.4: Sync Continuity**
 Ensuring the local and remote states are perfectly aligned for industrial deployment.
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/github.png" alt="GitHub Synchronization" width="100%" />
@@ -442,47 +448,49 @@ Ensuring the local and remote states are perfectly aligned for industrial deploy
 
 ---
 
-### 7.2 Vercel: Production Deployment
+### 7.3 Vercel: Production Deployment
 
 Transforming the repository into a live, industrial-grade web application.
 
-**Step 7.2.1: Project Import**
+**Step 7.3.1: Project Import**
 Connecting the GitHub repository to the Vercel platform to initiate the cloud build.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_landing.png" alt="Vercel Landing" width="100%" />
 </div>
 
-**Step 7.2.2: Build Configuration**
+**Step 7.3.2: Build Configuration**
 Defining the framework and directory structure for the serverless deployment.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_new_project.png" alt="Vercel New Project" width="100%" />
 </div>
 
-**Step 7.2.3: Initial Deployment Trace**
+**Step 7.3.3: Initial Deployment Trace**
 Triggering the first build cycle—observing the initial output before environment setup.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_first_deploy.png" alt="Vercel First Deploy" width="100%" />
 </div>
 
-**Step 7.2.4: Environment Variable Setup**
+**Step 7.3.4: Environment Variable Setup**
 Accessing the project settings to inject the required production credentials.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_env.png" alt="Vercel Env" width="100%" />
 </div>
 
-**Step 7.2.5: Secure API Token Injection**
+**Step 7.3.5: Secure API Token Injection**
 Adding the `X-Auth-Token` as an encrypted variable to the production scope.
 <div align="center">
   <img src="docs/VIII.%20Deploiement/vercel/vercel_add_env.png" alt="Vercel Add Env" width="100%" />
 </div>
 
-**Step 7.2.6: Industrial Launch**
+**Step 7.3.6: Industrial Launch**
 The application is now live and fully operational on its production URL.
 <div align="center">
   <img src="docs/III.%20Architecture%20%26%20API/vercel.png" alt="Vercel Deployment Status" width="100%" />
 </div>
 
-### 7.3. Final Results: And Voilà!
+### 7.4. Final Results: And Voilà!
+
+**Step 7.4.1: Production Hand-off**
 The project is now live — final deliverable view of the Ligue 1 dashboard in production (below).
 
 <div align="center">
