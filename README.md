@@ -1,4 +1,10 @@
-# ⚽ Cas d'usage : Créer un tableau de bord dynamique avec la Vibe Coding
+<!-- markdownlint-disable MD033 -->
+<div align="center">
+  <img src="public/logo_ligue1.png" alt="Ligue 1 Logo" width="200" />
+</div>
+<!-- markdownlint-enable MD033 -->
+
+# Cas d'usage : Créer un tableau de bord dynamique avec la Vibe Coding
 
 Dans ce cas d'usage, nous allons créer un tableau de bord dynamique qui affiche les scores de la **Ligue 1** de football en récupérant les données auprès d'une API. Comme pour les précédents cas d'usage, nous allons procéder étape par étape et utiliser un nouvel outil : **Antigravity de Google**.
 
@@ -10,7 +16,7 @@ Dans ce cas d'usage, nous allons créer un tableau de bord dynamique qui affiche
 
 ---
 
-## 🧭 Préambule
+## Préambule
 
 Avant de détailler chacune des étapes de la conception et de la création de ce tableau de bord, il nous semble essentiel de préciser plusieurs points :
 
@@ -20,7 +26,7 @@ Avant de détailler chacune des étapes de la conception et de la création de c
 
 ---
 
-## 📝 Cadrage du projet
+## Cadrage du projet
 
 Nous commençons par définir un cadre général en utilisant **Gemini**.
 
@@ -56,9 +62,9 @@ Le document `projet.md` définit les checklists et la structure visuelle.
 
 ---
 
-## 🎨 Définition d'une intention graphique
+## Définition d'une intention graphique
 
-Nous cherchons maintenant à spécifier les éléments visuels en nous inspirant de **FootX.fr**.
+Nous cherchons maintenant à spécifier les éléments graphiques en nous inspirant de **FootX.fr**.
 
 ### Mega-Prompt UI/UX
 Nous demandons à l'IA d'analyser l'esthétique "Sport-Tech" à partir de captures d'écran :
@@ -75,7 +81,7 @@ L'analyse identifie les codes suivants :
 
 ---
 
-## 📊 Choix et validation de la source de données
+## Choix et validation de la source de données
 
 Nous utilisons l'API de **football-data.org**. 
 
@@ -107,7 +113,7 @@ Nous importons la collection officielle pour valider les endpoints `standings` e
 
 ---
 
-## 🏗️ Rédaction des spécifications techniques
+## Rédaction des spécifications techniques
 
 Nous demandons à Gemini de rédiger le document `data.md` et `architecture.md`.
 
@@ -124,7 +130,7 @@ Nous demandons à Gemini de rédiger le document `data.md` et `architecture.md`.
 
 ---
 
-## 💻 Génération du code avec Antigravity
+## Génération du code avec Antigravity
 
 Nous importons toute notre documentation (les captures d'écran, les fichiers MD et les samples JSON) dans Antigravity.
 
@@ -148,7 +154,7 @@ export default async function handler(req, res) {
 
 ---
 
-## 🚀 Déploiement et Mise en ligne
+## Déploiement et Mise en ligne
 
 ### 1. Versionnage sur GitHub
 Nous lions le projet local à un repository distant.
