@@ -33,7 +33,7 @@ Every project begins with a clear **Intention**. We refused "Feature Creep" and 
 ### 1. Project Specifications
 We established our guardrails in the [projet.md](docs/I.%20Cadrage%20strat%C3%A9gique/projet.md) file. This document acts as the "Contract" between the strategy and the execution.
 
-> **Excerpt from projet.md:**
+> **Excerpt from [projet.md](docs/I.%20Cadrage%20strat%C3%A9gique/projet.md):**
 > *Objective: Develop a production-ready dashboard for French Ligue 1.*
 > *Context: Use high-density data visualization to provide immediate KPI insights for sports analysts.*
 > *Platform: Single Page Application (SPA) with real-time API integration.*
@@ -107,10 +107,10 @@ The AI processes the benchmark images and outputs a structured set of design rul
 ### The Final Design System
 The result is [theme.md](docs/II.%20Cr%C3%A9ations%20graphiques/theme.md), which serves as our visual constitution.
 
-> **Excerpt from theme.md:**
-> *--primary-green: #00E676;*
-> *--dark-bg: #0B0D10;*
-> *Font: 'Inter', sans-serif;*
+> **Excerpt from [theme.md](docs/II.%20Cr%C3%A9ations%20graphiques/theme.md):**
+> *--accent-primary: #DAF42D; /* Neon Lime / Yellow */*
+> *--dark-bg: #121212;*
+> *Font: 'Outfit', sans-serif;*
 > *Border-radius: 12px;*
 
 ---
@@ -119,7 +119,7 @@ The result is [theme.md](docs/II.%20Cr%C3%A9ations%20graphiques/theme.md), which
 
 The dashboard is "Live-Mocked": it uses real production data from the **football-data.org (v4)** API.
 
-> **Excerpt from architecture.md:**
+> **Excerpt from [architecture.md](docs/III.%20Architecture%20%26%20API/architecture.md):**
 > *Mapping UI components to API collections:*
 > *- Standing Table -> /v4/competitions/FL1/standings*
 > *- Match History -> /v4/competitions/FL1/matches*
@@ -223,7 +223,7 @@ Confirming that team crests (logos) are provided as valid URLs that our frontend
 We saved the live responses into local JSON files to build a "Static Mock" and enable offline development.
 
 ```json
-/* Sample from standings_FL1.json */
+/* Sample from [standings_FL1.json](docs/III.%20Architecture%20%26%20API/postman/samples/standings_FL1.json) */
 {
   "competition": { "name": "Ligue 1", "code": "FL1" },
   "season": { "startDate": "2025-08-17", "currentMatchday": 22 },
@@ -250,14 +250,13 @@ We establishing a project structure that is "AI-Transparent," providing full cla
 ### Step V.1: Scaffolding Prompts
 We provided the AI with two massive logic injections to define the architectural and data-handling rules.
 
-> **Excerpt from architecture.md:**
+> **Excerpt from [architecture.md](docs/III.%20Architecture%20%26%20API/architecture.md):**
 > *"You are a Senior Data Architect. Map the /v4/competitions/FL1/matches endpoint to the MatchCard component. Ensure the 'status' field is parsed to show 'Live' for IN_PLAY matches."*
 
-<div align="center">
-  <img src="docs/IV.%20Context%20Engineering/Contexte/prompt_architecture.png" alt="Architecture Scaffolding Mega-Prompt" width="100%" />
-</div>
+> [!TIP]
+> **Data Logic Scope**: The full data handling logic is defined in [technical_spec.md](docs/IV.%20Context%20Engineering/Contexte/MarkDowns/technical_spec.md).
 
-> **Excerpt from technical_spec.md:**
+> **Excerpt from [technical_spec.md](docs/IV.%20Context%20Engineering/Contexte/MarkDowns/technical_spec.md):**
 > *"The SPA must handle 10 API calls per minute. Implement an aggressive LocalStorage cache on the /standings endpoint with a 300s TTL."*
 
 <div align="center">
@@ -279,13 +278,13 @@ This architecture is reflected in a clean, modular file organization:
 
 ```text
 dashboard/
-├── api/             # Vercel Secure Proxy (Node.js)
-├── docs/            # Master Knowledge Base
-├── public/          # Production UI
-│   ├── app.js       # Data Hydration Engine
-│   ├── index.html   # Semantic Structure
-│   └── style.css    # Sport-Tech CSS System
-└── server.js        # Local Dev Node Server
+├── [api/](api/)             # Vercel Secure Proxy (Node.js)
+├── [docs/](docs/)            # Master Knowledge Base
+├── [public/](public/)          # Production UI
+│   ├── [app.js](public/app.js)       # Data Hydration Engine
+│   ├── [index.html](public/index.html)   # Semantic Structure
+│   └── [style.css](public/style.css)    # Sport-Tech CSS System
+└── [server.js](server.js)        # Local Dev Node Server
 ```
 
 ### Step V.3: Data-to-UI Mapping Blueprint
@@ -331,7 +330,7 @@ The agent completes the generation of the three core artifacts (proxy, app logic
   <img src="docs/V.%20Vibecoding/screenshots/antigravity_finish_code.png" alt="Antigravity Finish Code" width="100%" />
 </div>
 
-#### **Code Artifact A: Secure API Proxy (`api/proxy.js`)**  
+#### **Code Artifact A: Secure API Proxy ([api/proxy.js](api/proxy.js))**  
 The secret `API_KEY` lives in environment variables; a Node runtime forwards requests and avoids CORS.
 ```javascript
 export default async function handler(req, res) {
@@ -345,7 +344,7 @@ export default async function handler(req, res) {
 }
 ```
 
-#### **Code Artifact B: Data Engine (`public/app.js`)**  
+#### **Code Artifact B: Data Engine ([public/app.js](public/app.js))**  
 A single entry point fetches standings and matches on load, then fills the dashboard KPIs and charts.
 ```javascript
 async function loadDashboard() {
@@ -357,17 +356,17 @@ async function loadDashboard() {
 }
 ```
 
-#### **Code Artifact C: Design Tokens (`public/style.css`)**  
+#### **Code Artifact C: Design Tokens ([public/style.css](public/style.css))**  
 Applied via CSS custom properties to ensure colors and spacing stay consistent with the UI audit.
 ```css
 :root {
-  --bg-primary: #0B0D10;
-  --surface-1: #161A1F;
-  --accent-primary: #00E676; /* Ligue 1 Green */
+  --bg-color: #121212;
+  --panel-bg: #1A1A1A;
+  --accent-color: #DAF42D; /* Neon Lime */
 }
 .standings-table {
   width: 100%;
-  background: var(--surface-1);
+  background: var(--panel-bg);
   border-collapse: collapse;
 }
 ```
