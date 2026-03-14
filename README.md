@@ -502,3 +502,7 @@ Congratulations! Your **Ligue 1 Dashboard** is fully operational and production-
 
 *This master course demonstrates the peak of AI-orchestrated development. From strategy to production, you have successfully navigated the AI-Assisted workflow.*
 
+<div align="center">
+  <img src="docs/V.%20Vibecoding/Livrable.png" alt="Final Dashboard Delivery" width="100%" />
+</div>
+
