@@ -48,7 +48,7 @@ graph LR
 The mission: Transform a strategic vision into a live, industrial-grade Ligue 1 Dashboard.
 
 <div align="center">
-  <img src="docs/V. Vibecoding/Livrable.png" alt="Final Dashboard Delivery" width="100%" />
+  <img src="docs/V.%20Vibecoding/Livrable.png" alt="Final Dashboard Delivery" width="100%" />
 </div>
 
 ---
