@@ -246,7 +246,7 @@ Check all exported samples here: [postman/samples/](docs/III.%20Architecture%20%
 
 ## V. Architecture & Context Engineering
 
-We establishing a project structure that is "AI-Transparent," providing full clarity to the coding agent while maintaining a decoupled client-proxy model for security.
+We established a project structure that is "AI-Transparent," providing full clarity to the coding agent while maintaining a decoupled client-proxy model for security.
 
 ### Step V.1: Scaffolding Prompts
 We provided the AI with two massive logic injections to define the architectural and data-handling rules.
