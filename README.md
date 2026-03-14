@@ -55,12 +55,12 @@ The mission: Transform a strategic vision into a live, industrial-grade Ligue 1 
 
 ## I. Strategic Framing
 
-Every project begins with a clear **Intention**. We refused "Feature Creep" and defined a strict MVP scope to ensure a premium delivery within record time using our [Strategic Brief](docs/I.%20Strategic%20Framing/projet.md).
+Every project begins with a clear **Intention**. We refused "Feature Creep" and defined a strict MVP scope to ensure a premium delivery within record time using our [Strategic Brief](docs/I.%20Strategic%20Framing/Strategy%20and%20Concept.md).
 
 ### Step 1.1: Strategy & Vision
 All the strategic research was synthesized into a visual framing document that allows the team to align on the final product vision before any code was written — a one-pager summarizing scope, KPIs, and product vision.
 
-> **Excerpt from [Strategy Document](docs/I.%20Strategic%20Framing/projet.md):**
+> **Excerpt from [Strategy Document](docs/I.%20Strategic%20Framing/Strategy%20and%20Concept.md):**
 > *Objective: Develop a production-ready dashboard for French Ligue 1.*
 > *Context: Use high-density data visualization to provide immediate KPI insights.*
 
