@@ -264,6 +264,8 @@ We provided the AI with two massive logic injections to define the architectural
   <img src="docs/IV.%20Context%20Engineering/Contexte/prompt_data.png" alt="Data Logic Mega-Prompt" width="100%" />
 </div>
 
+---
+
 ### Step V.2: Technical Architecture
 The result is a secure request flow that sanitizes tokens and optimizes performance.
 
@@ -279,14 +281,16 @@ This architecture is reflected in a clean, modular file organization:
 
 ```text
 dashboard/
-├── [api/](api/)             # Vercel Secure Proxy (Node.js)
-├── [docs/](docs/)            # Master Knowledge Base
-├── [public/](public/)          # Production UI
-│   ├── [app.js](public/app.js)       # Data Hydration Engine
-│   ├── [index.html](public/index.html)   # Semantic Structure
-│   └── [style.css](public/style.css)    # Sport-Tech CSS System
-└── [server.js](server.js)        # Local Dev Node Server
+├── api/             # Vercel Secure Proxy (Node.js)
+├── docs/            # Master Knowledge Base
+├── public/          # Production UI
+│   ├── app.js       # Data Hydration Engine
+│   ├── index.html   # Semantic Structure
+│   └── style.css    # Sport-Tech CSS System
+└── server.js        # Local Dev Node Server
 ```
+
+---
 
 ### Step V.3: Data-to-UI Mapping Blueprint
 We mapped every UI block to its respective API collection as defined in our [architecture.md](docs/III.%20Architecture%20%26%20API/architecture.md) — the master plan for the coding session.
