@@ -48,19 +48,19 @@ graph LR
 The mission: Transform a strategic vision into a live, industrial-grade Ligue 1 Dashboard.
 
 <div align="center">
-  <img src="docs/V.%20Vibecoding/Livrable.png" alt="Final Dashboard Delivery" width="100%" />
+  <img src="docs/V.%20VibeCoding/Livrable.png" alt="Final Dashboard Delivery" width="100%" />
 </div>
 
 ---
 
 ## I. Strategic Framing
 
-Every project begins with a clear **Intention**. We refused "Feature Creep" and defined a strict MVP scope to ensure a premium delivery within record time using our [Strategic Brief](docs/I.%20Cadrage%20strat%C3%A9gique/projet.md).
+Every project begins with a clear **Intention**. We refused "Feature Creep" and defined a strict MVP scope to ensure a premium delivery within record time using our [Strategic Brief](docs/I.%20Strategic%20Framing/projet.md).
 
-### Step 1.1: Strategic Strategy & Vision
+### Step 1.1: Strategy & Vision
 All the strategic research was synthesized into a visual framing document that allows the team to align on the final product vision before any code was written — a one-pager summarizing scope, KPIs, and product vision.
 
-> **Excerpt from [Strategy Document](docs/I.%20Cadrage%20strat%C3%A9gique/projet.md):**
+> **Excerpt from [Strategy Document](docs/I.%20Strategic%20Framing/projet.md):**
 > *Objective: Develop a production-ready dashboard for French Ligue 1.*
 > *Context: Use high-density data visualization to provide immediate KPI insights.*
 
@@ -79,16 +79,16 @@ To avoid a "generic" or "empty" feel, we audited **FootX.fr**, a gold standard i
 ### Step 2.1: Analyzing the Landing Hierarchy
 The landing page audit helps us understand how to greet the user with immediate, high-value information; the screenshot shows the FootX landing page — hierarchy and placement of main KPIs and navigation.
 <div align="center">
-  <img src="docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_landing.png" alt="FootX Landing Benchmark" width="100%" />
+  <img src="docs/II.%20Graphic%20Collections/references/screenshots_footx/footx_landing.png" alt="FootX Landing Benchmark" width="100%" />
 </div>
 
 <br />
 
-| [**Data-Dense Tables (2.2)**](docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_ranking.png) | [**Results & Performance (2.3)**](docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_results.png) |
+| [**Data-Dense Tables (2.2)**](docs/II.%20Graphic%20Collections/references/screenshots_footx/footx_ranking.png) | [**Results & Performance (2.3)**](docs/II.%20Graphic%20Collections/references/screenshots_footx/footx_results.png) |
 |---|---|
-| <img src="docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_ranking.png" width="400" /> | <img src="docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_results.png" width="400" /> |
-| [**Match Rhythm (2.4)**](docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_upcoming.png) | [**Analytical Assets (2.5)**](docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_data.png) |
-| <img src="docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_upcoming.png" width="400" /> | <img src="docs/II.%20Cr%C3%A9ations%20graphiques/references/screenshots_footx/footx_data.png" width="400" /> |
+| <img src="docs/II.%20Graphic%20Collections/references/screenshots_footx/footx_ranking.png" width="400" /> | <img src="docs/II.%20Graphic%20Collections/references/screenshots_footx/footx_results.png" width="400" /> |
+| [**Match Rhythm (2.4)**](docs/II.%20Graphic%20Collections/references/screenshots_footx/footx_upcoming.png) | [**Analytical Assets (2.5)**](docs/II.%20Graphic%20Collections/references/screenshots_footx/footx_data.png) |
+| <img src="docs/II.%20Graphic%20Collections/references/screenshots_footx/footx_upcoming.png" width="400" /> | <img src="docs/II.%20Graphic%20Collections/references/screenshots_footx/footx_data.png" width="400" /> |
 
 ### Engineering the UI Prompt
 We didn't just tell the AI to "make it dark." We provided an exhaustive audit prompt to extract specific tokens. 
@@ -97,18 +97,18 @@ We didn't just tell the AI to "make it dark." We provided an exhaustive audit pr
 > *"You are a Senior UI/UX Designer. Audit the provided screenshots of FootX.fr. Extract the following: Primary Background HEX, Surface Card HEX, Border Radius scaled in PX, and Font Stack hierarchy. Output a JSON design system."*
 
 > [!TIP]
-> **Mega-Prompt Restoration**: The full design audit prompt is saved in [prompt_design.md](docs/II.%20Cr%C3%A9ations%20graphiques/prompt_design.md). It instructs the AI to sample HEX codes, border radii, and spacing scales directly from the benchmark images.
+> **Mega-Prompt Restoration**: The full design audit prompt is saved in [prompt_design.md](docs/II.%20Graphic%20Collections/prompt_design.md). It instructs the AI to sample HEX codes, border radii, and spacing scales directly from the benchmark images.
 
 ### Step 2.6: The AI Design Analysis
 The AI processes the benchmark images and outputs a structured set of design rules — prompt and output (colors, radii, typography) derived from the FootX benchmarks (screenshot below).
 <div align="center">
-  <img src="docs/II.%20Cr%C3%A9ations%20graphiques/prompt_design.png" alt="AI UI Audit Workflow" width="100%" />
+  <img src="docs/II.%20Graphic%20Collections/prompt_design.png" alt="AI UI Audit Workflow" width="100%" />
 </div>
 
 ### The Final Design System
-The result is [theme.md](docs/II.%20Cr%C3%A9ations%20graphiques/theme.md), which serves as our visual constitution.
+The result is [theme.md](docs/II.%20Graphic%20Collections/theme.md), which serves as our visual constitution.
 
-> **Excerpt from [theme.md](docs/II.%20Cr%C3%A9ations%20graphiques/theme.md):**
+> **Excerpt from [theme.md](docs/II.%20Graphic%20Collections/theme.md):**
 > *--accent-primary: #DAF42D; /* Neon Lime / Yellow */*
 > *--dark-bg: #121212;*
 > *Font: 'Outfit', sans-serif;*
@@ -413,13 +413,13 @@ To sync with GitHub and deploy, you need Git on your machine.
 ### Step 7.1.1: Software Prerequisite (Git Download)
 Download the installer from the official site (download page below).
 <div align="center">
-  <img src="docs/VIII.%20Deploiement/git/git-download-page.png" alt="Git Download Page" width="100%" />
+  <img src="docs/VIII.%20Deployment/git/git-download-page.png" alt="Git Download Page" width="100%" />
 </div>
 
 ### Step 7.1.2: Software Prerequisite (Git Installation)
 Follow the wizard to complete the installation on your local system (installer wizard below).
 <div align="center">
-  <img src="docs/VIII.%20Deploiement/git/git-installer-wizard.jpg" alt="Git Installer Wizard" width="100%" />
+  <img src="docs/VIII.%20Deployment/git/git-installer-wizard.jpg" alt="Git Installer Wizard" width="100%" />
 </div>
 
 ### 7.2 GitHub: Version Control & Remote Sync
@@ -429,19 +429,19 @@ Every milestone is versioned and pushed to the remote source of truth.
 ### Step 7.2.1: Repository Creation
 Setting up the destination—initializing a new repository to host the project core.
 <div align="center">
-  <img src="docs/VIII.%20Deploiement/github/github-create-repo.png" alt="GitHub Create Repo" width="100%" />
+  <img src="docs/VIII.%20Deployment/github/github-create-repo.png" alt="GitHub Create Repo" width="100%" />
 </div>
 
 ### Step 7.2.2: First Sync State
 The empty repository state, ready to receive the first commit of the dashboard files.
 <div align="center">
-  <img src="docs/VIII.%20Deploiement/github/github-repo-empty.png" alt="GitHub Repo Empty" width="100%" />
+  <img src="docs/VIII.%20Deployment/github/github-repo-empty.png" alt="GitHub Repo Empty" width="100%" />
 </div>
 
 ### Step 7.2.3: Remote Code Validation
 Confirming that all folders (api, docs, public) are correctly synchronized on the server.
 <div align="center">
-  <img src="docs/VIII.%20Deploiement/github/github-repo-full.png" alt="GitHub Repo Full" width="100%" />
+  <img src="docs/VIII.%20Deployment/github/github-repo-full.png" alt="GitHub Repo Full" width="100%" />
 </div>
 
 ### Step 7.2.4: Sync Continuity
@@ -459,31 +459,31 @@ Transforming the repository into a live, industrial-grade web application.
 ### Step 7.3.1: Project Import
 Connecting the GitHub repository to the Vercel platform to initiate the cloud build.
 <div align="center">
-  <img src="docs/VIII.%20Deploiement/vercel/vercel_landing.png" alt="Vercel Landing" width="100%" />
+  <img src="docs/VIII.%20Deployment/vercel/vercel_landing.png" alt="Vercel Landing" width="100%" />
 </div>
 
 ### Step 7.3.2: Build Configuration
 Defining the framework and directory structure for the serverless deployment.
 <div align="center">
-  <img src="docs/VIII.%20Deploiement/vercel/vercel_new_project.png" alt="Vercel New Project" width="100%" />
+  <img src="docs/VIII.%20Deployment/vercel/vercel_new_project.png" alt="Vercel New Project" width="100%" />
 </div>
 
 ### Step 7.3.3: Initial Deployment Trace
 Triggering the first build cycle—observing the initial output before environment setup.
 <div align="center">
-  <img src="docs/VIII.%20Deploiement/vercel/vercel_first_deploy.png" alt="Vercel First Deploy" width="100%" />
+  <img src="docs/VIII.%20Deployment/vercel/vercel_first_deploy.png" alt="Vercel First Deploy" width="100%" />
 </div>
 
 ### Step 7.3.4: Environment Variable Setup
 Accessing the project settings to inject the required production credentials.
 <div align="center">
-  <img src="docs/VIII.%20Deploiement/vercel/vercel_env.png" alt="Vercel Env" width="100%" />
+  <img src="docs/VIII.%20Deployment/vercel/vercel_env.png" alt="Vercel Env" width="100%" />
 </div>
 
 ### Step 7.3.5: Secure API Token Injection
 Adding the `X-Auth-Token` as an encrypted variable to the production scope.
 <div align="center">
-  <img src="docs/VIII.%20Deploiement/vercel/vercel_add_env.png" alt="Vercel Add Env" width="100%" />
+  <img src="docs/VIII.%20Deployment/vercel/vercel_add_env.png" alt="Vercel Add Env" width="100%" />
 </div>
 
 ### Step 7.3.6: Industrial Launch
