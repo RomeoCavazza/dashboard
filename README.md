@@ -45,7 +45,7 @@ graph LR
 ```
 
 ### The Final Result
-The mission: Transforming a strategic vision into a live, industrial-grade Ligue 1 Dashboard.
+The mission: Transform a strategic vision into a live, industrial-grade Ligue 1 Dashboard.
 
 <div align="center">
   <img src="docs/V. Vibecoding/Livrable.png" alt="Final Dashboard Delivery" width="100%" />
