@@ -428,6 +428,16 @@ Follow the wizard to complete the installation on your local system (installer w
 
 Every milestone is versioned and pushed to the remote source of truth.
 
+**Commands (first push from local):**
+
+```bash
+git init
+git remote add origin git@github.com:USERNAME/dashboard.git
+git add .
+git commit -m 'my first commit'
+git push -u origin main
+```
+
 ### Step 7.2.1: Repository Creation
 Setting up the destination—initializing a new repository to host the project core.
 <div align="center">
