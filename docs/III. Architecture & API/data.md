@@ -1,7 +1,27 @@
-# data.md
+# data.md — Données & API Dashboard Ligue 1
+
+Document **source de vérité** pour l’architecture data : endpoints, datasets, mapping vers les composants, agrégations et checklists. Complément de `architecture.md` et `theme.md` pour le build.
 
 > Champs partiellement confirmés via `samples/competition_FL1.json` (200 OK).
 > Standings, matches et teams restent à valider (samples à remplir).
+
+---
+
+## Vue d’ensemble des sections
+
+```mermaid
+flowchart TB
+    A[1. Endpoints] --> B[2. Datasets]
+    B --> C[3. Mapping]
+    C --> D[4. Agrégations]
+    D --> E[5. Optimisation]
+    E --> F[6. Collections]
+    F --> G[7. Flux chargement]
+    G --> H[8. Validation]
+    H --> I[9. Checklist]
+```
+
+---
 
 **Champs confirmés — `competition_meta` (source : competition_FL1.json réel) :**
 - `name` → `"Ligue 1"`

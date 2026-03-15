@@ -1,4 +1,24 @@
-# theme.md
+# theme.md — Design system Dashboard Ligue 1
+
+Document **source de vérité** pour le design du dashboard mono-page. Issu de l’audit des captures FootX et du prompt canonique `prompt_design.md`. À utiliser pour configurer les tokens et composants dans Antigravity (ou en CSS/JS).
+
+---
+
+## Vue d’ensemble du document
+
+```mermaid
+flowchart TB
+    A[1. Synthèse FootX] --> B[2. Palette HEX]
+    B --> C[3. Design tokens]
+    C --> D[4. Typo]
+    D --> E[5. Layout]
+    E --> F[6. Composants UI]
+    F --> G[7. Règles globales]
+    G --> H[8. Adaptation mono-page]
+    H --> I[9. Checklist Antigravity]
+```
+
+---
 
 ## 1. Synthèse visuelle FootX (captures + lien)
 À partir des 5 captures (footx-data.png, footx-landing.png, footx-ranking.png, footx-results.png, footx-upcoming.png) et du lien FootX Ligue 1, l’UI suit une logique **sport-tech dark** : densité d’information élevée, lecture rapide, hiérarchie très “data”.

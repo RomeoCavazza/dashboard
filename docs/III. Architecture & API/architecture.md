@@ -1,7 +1,24 @@
-# architecture.md
+# architecture.md — Architecture Dashboard Ligue 1
 
-Dashboard mono-page Ligue 1 — Vue UI-first.
-Référence complète data : `03_DATA/data.md` | Design : `02_DESIGN/theme.md`
+Dashboard mono-page Ligue 1 — vue **UI-first**. Ce document est le livrable technique issu du prompt canonique `IV. Context Engineering/Contexte/MarkDowns/architecture.md`. Références : data complète dans `data.md` | Design dans `theme.md`.
+
+---
+
+## Références croisées
+
+| Document | Rôle |
+|----------|------|
+| **architecture.md** (ce fichier) | Layout, mapping UI → collections, ordre de build. |
+| `data.md` | Endpoints, champs, agrégations. |
+| `theme.md` | Palette, tokens, composants. |
+
+```mermaid
+flowchart LR
+    A[architecture.md] --> B[data.md]
+    A --> C[theme.md]
+    B --> D[Build]
+    C --> D
+```
 
 ---
 

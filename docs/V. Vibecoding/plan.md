@@ -1,4 +1,23 @@
-# plan.md
+# plan.md — Plan d’implémentation Ligue 1 Dashboard
+
+Ce document est le **plan d’exécution** pour construire le dashboard en local (Node + mock) ou avec l’API réelle. Il sert de checklist pour les étudiants et de référence pour l’agent de vibecoding.
+
+---
+
+## Flux global (Mermaid)
+
+```mermaid
+flowchart LR
+    A[Pré-requis] --> B[Config Antigravity]
+    B --> C[Collections]
+    C --> D[Composants UI]
+    D --> E[Mapping data → UI]
+    E --> F[Stratégie refresh]
+    F --> G[Build steps]
+    G --> H[Tests]
+```
+
+---
 
 ## A. Pré-requis
 - **Antigravity** access active.

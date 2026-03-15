@@ -1,6 +1,29 @@
 # PROMPT CANONIQUE — theme.md
 
-Copie-colle tel quel dans une nouvelle conversation :
+Ce fichier est le **méga-prompt** pour générer le document **theme.md** (design system) du dashboard Ligue 1. Il impose une analyse des captures FootX et une sortie structurée en tokens, palette, typo et composants.
+
+---
+
+## Workflow recommandé
+
+```mermaid
+flowchart LR
+    A[Captures FootX] --> B[Prompt theme]
+    B --> C[Agent UI/UX]
+    C --> D[theme.md]
+    D --> E[Antigravity tokens]
+```
+
+| Étape | Action |
+|-------|--------|
+| 1 | Avoir les 5 captures FootX (landing, ranking, results, upcoming, data). |
+| 2 | Attacher **projet.md** en annexe. |
+| 3 | Copier-coller le bloc ci-dessous. |
+| 4 | Vérifier que les HEX sont indiqués comme **estimés** (à valider par pipette). |
+
+---
+
+## Bloc à copier-coller
 
 ---
 

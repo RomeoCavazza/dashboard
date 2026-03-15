@@ -1,4 +1,29 @@
-# projet.md
+# projet.md — Stratégie & concept Dashboard Ligue 1
+
+Ce document est le **périmètre stratégique** du projet : objectif, MVP, sections du dashboard, blocs fonctionnels et contraintes techniques. Il sert d’annexe aux prompts **architecture.md**, **data.md** et **theme.md**.
+
+---
+
+## Positionnement du document dans le workflow
+
+```mermaid
+flowchart LR
+    A[projet.md] --> B[architecture.md]
+    A --> C[data.md]
+    A --> D[theme.md]
+    B --> E[Build]
+    C --> E
+    D --> E
+```
+
+| Document | Rôle |
+|----------|------|
+| **projet.md** (ce fichier) | Scope, sections, contraintes API et Antigravity. |
+| architecture.md | Layout, mapping UI → collections, ordre de build. |
+| data.md | Endpoints, datasets, agrégations, flux de chargement. |
+| theme.md | Palette, tokens, typo, composants (design). |
+
+---
 
 ## 1. Description claire du projet
 

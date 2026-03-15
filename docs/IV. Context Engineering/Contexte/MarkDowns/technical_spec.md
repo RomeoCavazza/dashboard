@@ -1,6 +1,14 @@
-# Layout mono-page (ordre vertical)
+# technical_spec.md — Spécification technique Dashboard Ligue 1
 
-""
+Ce document est le **livrable technique** issu du prompt canonique **architecture.md**. Il décrit le layout, le mapping UI → data, les collections et l’ordre de build pour une implémentation no-code (Antigravity) ou code (Vanilla JS + proxy).
+
+---
+
+## 1. Layout mono-page (ordre vertical)
+
+Schéma ASCII de la structure de la page (de haut en bas). Chaque bloc correspond à un composant ou groupe de composants.
+
+```text
 ┌─────────────────────────────────────────────────────┐
 │  1. HEADER                                          │
 │     Nom compétition · Saison · Logo Ligue 1         │
@@ -18,7 +26,19 @@
 ├─────────────────────────────────────────────────────┤
 │  5. FOOTER  · Données : football-data.org v4        │
 └─────────────────────────────────────────────────────┘
-""
+```
+
+```mermaid
+flowchart TB
+    H[1. Header] --> K[2. KPIs]
+    K --> C[3. Classement]
+    C --> G[4. Graphiques]
+    G --> F[5. Footer]
+    G --> G1[4a. Bar points]
+    G --> G2[4b. Bar attaques]
+    G --> G3[4c. Bar défenses]
+    G --> G4[4d. Histo journée]
+```
 
 ---
 

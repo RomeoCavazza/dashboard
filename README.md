@@ -23,6 +23,8 @@ Welcome to the **complete chronological handbook** for the Ligue 1 Dashboard pro
 > - 4 Key Statistical Visualizations (Bar charts & Histograms).
 > - **Zero** complex navigation to maintain speed and focus.
 
+All prompts, strategy and documentation are available in the [**docs**](/docs) folder.
+
 ## Technical Core
 
 | Layer | Implementation |
