@@ -6,7 +6,7 @@ Below you will find a simplified tree of the docs structure, the project lifecyc
 
 ---
 
-## Docs tree (simplified)
+## Docs tree
 
 ```
 docs/
